@@ -93,4 +93,11 @@ Product intelligence for the Teacher Journey Model is complete (including the fo
 
 EduVijna Product Office.
 
-GitHub: [github.com/eduvijna](https://github.com/eduvijna)
+GitHub: [github.com/eduvijna/eduvijna-product](https://github.com/eduvijna/eduvijna-product)
+
+## License
+
+Copyright 2026 EduVijna
+
+Licensed under the [Apache License, Version 2.0](LICENSE).
+
