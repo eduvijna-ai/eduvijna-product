@@ -68,7 +68,18 @@ Review package: `../reviews/review-packages/PA-001/`
 
 1. **Today's Mission** — login briefing (not nav-first)  
 2. **Continuous Context** — session thread across related actions  
-3. **Review Queue** — one place to approve all AI outputs  
+3. **Review Queue** — one place to approve all **Artifacts**  
+
+## Binding decisions (every sprint)
+
+| Decision | Doc |
+|----------|-----|
+| A — Everything is an Artifact | `teacher-os/ARTIFACT_MODEL.md` |
+| B — Intent stateless / Work stateful | `teacher-os/INTENT_AND_WORK.md` |
+
+## Wave 2 product addition
+
+- **Notification Center** (workflow notifications) — `teacher-os/NOTIFICATION_CENTER.md` — not Wave 1
 
 ## Approved inputs only
 

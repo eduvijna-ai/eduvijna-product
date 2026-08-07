@@ -81,13 +81,14 @@ Implementation targets existing apps: **Quiz-React (eduvijna-web)** + **eduvijna
 ## How to use this repository
 
 1. Read `vision/` and TLM artefacts for *why*.  
-2. Read `product-architecture/` for *what the Teacher OS is*.  
-3. Read `engineering/EBP-*` for *how to build the next vertical slices*.  
-4. Review packages: `TLM-001` · `PA-001` · `EBP-001`.  
+2. Read `product-architecture/` for *what the Teacher OS is* (incl. Artifact + Intent/Work decisions).  
+3. Read `engineering/ENGINEERING_STANDARDS.md` before any coding.  
+4. Read `engineering/EBP-*` for *how to build the next vertical slices*.  
+5. Review packages: `TLM-001` · `PA-001` · `EBP-001`.  
 
 ## Stop condition
 
-**EBP-001 blueprint complete. STOP. Await Engineering / Product review before coding Wave 1 in application repos.**
+**EBP-001 + Engineering Standards ready. STOP. Await review before Sprint 0 coding in application repos.**
 
 ## Contribution
 

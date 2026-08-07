@@ -36,6 +36,17 @@ Deploy (behind feature flags)
 
 A teacher must be able to **use something after every sprint**.
 
+### Architecture decisions that bind every sprint
+
+| Decision | Doc |
+|----------|-----|
+| A — Everything is an Artifact | `../../product-architecture/teacher-os/ARTIFACT_MODEL.md` |
+| B — Intent stateless / Work stateful | `../../product-architecture/teacher-os/INTENT_AND_WORK.md` |
+
+### Engineering constitution (mandatory before Sprint 0)
+
+**[`../ENGINEERING_STANDARDS.md`](../ENGINEERING_STANDARDS.md)** must be accepted before Sprint 0 coding starts.
+
 Forbidden for Wave 1:
 
 ```text
@@ -100,5 +111,6 @@ Review package: `../../reviews/review-packages/EBP-001/`
 ## Stop condition for this blueprint package
 
 Blueprint + review package authored.  
+`ENGINEERING_STANDARDS.md` authored (constitution).  
 
-**Implementation starts only after Engineering / Product Architecture Review of EBP-001.**
+**Implementation starts only after Engineering / Product Architecture Review of EBP-001 and acceptance of Engineering Standards.**

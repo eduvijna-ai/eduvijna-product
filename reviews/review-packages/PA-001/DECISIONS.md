@@ -27,7 +27,12 @@ Product architecture decisions proposed for review. Not ADRs for infrastructure.
 | D-013 | Login lands on Today's Mission briefing; nav is secondary | Teachers need day load + Review CTA, not a menu | Proposed |
 | D-014 | Continuous Context = session/Intent thread; distinct from Teacher Memory & School Context | “Make worksheet harder” must not forget Grade/topic | Proposed |
 | D-015 | Review Queue is signature approval surface; all AI outputs enter it before publish | Replace one-by-one downloads; Mission Review → opens queue | Proposed |
+| D-016 | **Everything is an Artifact** — unified lifecycle; Review Queue is type-agnostic | Future capabilities add types, not new queues | **Accepted** |
+| D-017 | **Intent is stateless; Work is stateful** — Intent completes; Work persists (continue/edit/share/duplicate/archive) | Durable teaching projects without reifying intents | **Accepted** |
+| D-018 | Notification Center in Wave 2 (workflow notifications, not chat) | Complements Today/Mission; avoid Wave 1 scope creep | **Accepted (planned)** |
 
 ## Supersedes / extends
 
-Extends TLM-001 models into architecture. v0.2 adds Mission, Continuous Context, and Review Queue without invalidating prior PA decisions; Kit Review is subordinated to Review Queue as the canonical approval path.
+Extends TLM-001 models into architecture. v0.2 adds Mission, Continuous Context, and Review Queue.  
+v0.3 locks Artifact + Intent/Work decisions and schedules Notification Center for Wave 2.  
+Engineering constitution: `engineering/ENGINEERING_STANDARDS.md` (required before EBP-001 Sprint 0).

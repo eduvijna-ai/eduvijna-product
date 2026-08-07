@@ -16,26 +16,23 @@ EduVijna needs a **single review surface**.
 
 ## Definition
 
-**Review Queue** is the unified list of AI-produced artefacts awaiting teacher judgement.
+**Review Queue** is the unified, **type-agnostic** list of **Artifacts** awaiting teacher judgement.
 
-Every AI output that could reach a student, parent, or official record **must enter the Review Queue** before publish.
+Per Decision A (*Everything is an Artifact*), the queue does not care whether the item is a worksheet, quiz, PPT, or parent draft — it operates on Artifact lifecycle state.
+
+Every AI-generated Artifact that could reach a student, parent, or official record **must enter the Review Queue** before publish.
 
 ```text
 Capability Orchestration
         ↓
-Review Queue
-  · Lesson Plan
-  · Worksheet
-  · Quiz
-  · PPT
-  · Homework
-  · Parent Draft
+Artifacts (AI Generated)
         ↓
-Teacher reviews / edits / regenerates
+Review Queue (generic)
+  · any artifact_type
         ↓
-Ready to Publish (approved)
+Teacher Review → Approved
         ↓
-Publish / Assign / Send (explicit)
+Published (explicit)
 ```
 
 ---

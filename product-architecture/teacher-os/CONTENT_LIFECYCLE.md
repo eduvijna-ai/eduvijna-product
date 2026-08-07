@@ -1,37 +1,54 @@
 # Content Lifecycle
 
 **ID:** PA-LIFE-001  
-**Status:** Draft — PA-001
+**Status:** Draft — PA-001 (aligned to Decision A — Artifact Model)  
+**Canonical model:** `ARTIFACT_MODEL.md`
 
 ---
 
 ## Purpose
 
-Define how teaching artefacts move from idea to classroom to archive — without duplicate “versions of truth.”
+Define how **Artifacts** move from idea to classroom to archive — without duplicate “versions of truth.”
+
+**Everything is an Artifact.** Types (worksheet, quiz, PPT, …) are attributes.
 
 ---
 
-## States
+## Unified Artifact lifecycle (Decision A)
 
 ```text
-Idea / Intent Draft
-        ↓
-Assembling (orchestration in progress)
-        ↓
-Needs review          ← enters Review Queue
-        ↓
-In review (teacher editing / Continuous Context refine)
-        ↓
-Approved (Ready to Publish)
-        ↓
-Published / Assigned (students or parents — if applicable)
-        ↓
-Completed (attempts/feedback in)
-        ↓
-Archived (Library history)
+Draft
+   ↓
+AI Generated
+   ↓
+Teacher Review      ← Review Queue (generic — type-agnostic)
+   ↓
+Approved
+   ↓
+Published
+   ↓
+Archived
 ```
 
-Optional: **Superseded** when Continuous Context regenerate replaces an older draft for the same queue item.
+| State | Queue / product meaning |
+|-------|-------------------------|
+| Draft | Stub / pre-generate |
+| AI Generated | Entered queue as needs review |
+| Teacher Review | Opened / editing / Continuous Context refine |
+| Approved | Ready to Publish |
+| Published | Assigned/sent to audience |
+| Archived | Library history |
+
+Optional: **Superseded** when regenerate replaces an older Artifact version under the same Work.
+
+---
+
+## Intent vs Work (Decision B)
+
+- **Teaching Intent** is stateless and completes when orchestration finishes.  
+- **Work** is stateful and holds Artifacts over time (continue, edit, share, duplicate, archive).  
+
+See `INTENT_AND_WORK.md`.
 
 ---
 
@@ -39,15 +56,13 @@ Optional: **Superseded** when Continuous Context regenerate replaces an older dr
 
 | From → To | Who | Rule |
 |-----------|-----|------|
-| Draft → Assembling | Teacher (Generate) | Intent validated; Continuous Context opens |
-| Assembling → Needs review | System | Artefacts appear in Review Queue |
-| Needs review → In review | Teacher | Opens queue item |
-| In review → Approved | Teacher | Explicit approve (full or partial) |
-| Approved → Published | Teacher | Explicit assign/send from Ready to Publish |
-| Published → Completed | System + Teacher | Attempts closed / marked |
-| Any → Archived | Teacher or policy | Remains searchable in Library |
+| Draft → AI Generated | System (generate) | Intent may complete; Work persists; Artifact enters Review Queue |
+| AI Generated → Teacher Review | Teacher | Opens queue item |
+| Teacher Review → Approved | Teacher | Explicit approve |
+| Approved → Published | Teacher | Explicit assign/send |
+| * → Archived | Teacher or policy | Remains searchable in Library |
 
-**Product rule:** Student/parent-facing artefacts cannot jump to Published without Review Queue approval.
+**Product rule:** Student/parent-facing Artifacts cannot jump to Published without Teacher Review approval.
 
 
 ---

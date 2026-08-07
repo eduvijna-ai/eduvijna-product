@@ -39,8 +39,9 @@
 - Parent draft + PTM briefs  
 - PPT + sketch notes in kits  
 - Memory write-back confirmation UX  
+- **Notification Center** — teacher workflow notifications (not chat); see `NOTIFICATION_CENTER.md`  
 
-**Exit criteria:** Hours saved band emerging; remediation within 7 days rising.
+**Exit criteria:** Hours saved band emerging; remediation within 7 days rising; notifications deepen Mission/Today without distraction.
 
 ---
 

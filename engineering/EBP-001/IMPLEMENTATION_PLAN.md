@@ -83,11 +83,13 @@ Mission + expandable day workspace:
 
 ### 3.4 Review Queue (mandatory)
 
-Every AI-generated artefact from Teacher OS / Platform AI generate flows enters Review Queue.
+Every AI-generated **Artifact** from Teacher OS / Platform AI generate flows enters the **generic** Review Queue (Decision A).
 
-Types: Worksheet · Quiz · Lesson Plan · PPT · Sketch Notes · Homework · Parent Draft (as available).
+Types are attributes (`worksheet`, `quiz`, `lesson_plan`, …) — the queue does not fork per type.
 
 **Nothing reaches students without teacher approval.**
+
+**Work** (Decision B) groups Artifacts durably; **Intent** completes after orchestration.
 
 Implementation approach:
 
