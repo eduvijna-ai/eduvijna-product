@@ -50,16 +50,8 @@ Powered by:
 eduvijna-product/
 ├── README.md
 ├── vision/
-│   ├── PRODUCT_VISION.md
-│   ├── PRODUCT_PRINCIPLES.md
-│   ├── NORTH_STAR.md
-│   ├── TEACHING_INTENT.md
-│   ├── DAILY_LOOP.md
-│   └── TEACHER_OS.md
 ├── memory/
-│   └── teacher-memory.md
 ├── context/
-│   └── school-context.md
 ├── personas/
 ├── journeys/teacher/
 ├── jobs-to-be-done/
@@ -67,27 +59,32 @@ eduvijna-product/
 ├── opportunities/
 ├── capability-mapping/
 ├── metrics/
-└── reviews/review-packages/TLM-001/
+├── product-architecture/          ← PA-001 Teacher OS
+│   ├── teacher-os/
+│   └── wireframes/
+└── reviews/review-packages/
+    ├── TLM-001/
+    └── PA-001/
 ```
 
 ## Current focus
 
-**TLM-001 — Teacher Journey Model** (amended with Intent, Memory, School Context, Daily Loop, Teacher OS)
+**PA-001 — Teacher OS Product Architecture** (built on approved TLM-001)
+
+See `product-architecture/` and `reviews/review-packages/PA-001/`.
+
+**TLM-001 — Teacher Journey Model** remains the research foundation under `personas/`, `journeys/`, `vision/`, etc.
 
 ## How to use this repository
 
-1. Read `vision/` (including Teaching Intent, Daily Loop, Teacher OS).  
-2. Read `memory/` and `context/` before proposing AI behaviour.  
-3. Read `personas/teacher.md` and walk `journeys/teacher/`.  
-4. Use JTBD / pains / opportunities as demand signals.  
-5. Use `capability-mapping/` as backlog input — Intent layer first, not generator menus.  
-6. Package work under `reviews/review-packages/` for Product Architecture Review.
+1. Read `vision/` and TLM artefacts for *why*.  
+2. Read `product-architecture/` for *what the Teacher OS is*.  
+3. Use `capability-mapping/` and `product-architecture/teacher-os/CAPABILITY_ORCHESTRATION.md` as backlog input.  
+4. Review packages: `TLM-001` (research), `PA-001` (architecture).  
 
-## Stop condition for TLM-001
+## Stop condition
 
-Product intelligence for the Teacher Journey Model is complete (including the four amendments).
-
-**STOP. Await Product Architecture Review.**
+**PA-001 complete. STOP. Await Product Architecture Review decision before engineering.**
 
 ## Ownership
 

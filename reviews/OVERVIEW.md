@@ -6,7 +6,8 @@ Product review packages for EduVijna Product Office.
 
 | ID | Title | Status |
 |----|-------|--------|
-| TLM-001 | Teacher Journey Model | Draft — awaiting Product Architecture Review |
+| TLM-001 | Teacher Journey Model | Draft — research foundation |
+| PA-001 | Teacher OS Product Architecture | Draft — awaiting Product Architecture Review |
 
 ## Location
 
@@ -14,6 +15,8 @@ Product review packages for EduVijna Product Office.
 
 ## Rule
 
-Review packages summarise canonical research under `vision/`, `personas/`, `journeys/`, `jobs-to-be-done/`, `pain-points/`, `opportunities/`, `capability-mapping/`, and `metrics/`.
+- **TLM-*** packages summarise product intelligence research.  
+- **PA-*** packages summarise product architecture for review before engineering.  
 
 Canonical documents remain the source of truth; review packages are the decision interface.
+
