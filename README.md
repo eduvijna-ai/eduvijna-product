@@ -69,22 +69,25 @@ eduvijna-product/
 
 ## Current focus
 
-**PA-001 — Teacher OS Product Architecture** (built on approved TLM-001)
+**EBP-001 — Teacher OS Foundation Engineering Blueprint** (Wave 1 Shell)
 
-See `product-architecture/` and `reviews/review-packages/PA-001/`.
+See `engineering/EBP-001/` and `reviews/review-packages/EBP-001/`.
 
-**TLM-001 — Teacher Journey Model** remains the research foundation under `personas/`, `journeys/`, `vision/`, etc.
+Implementation targets existing apps: **Quiz-React (eduvijna-web)** + **eduvijna-api** — vertical-slice first, behind feature flags.
+
+**PA-001** remains the product architecture foundation under `product-architecture/`.  
+**TLM-001** remains the research foundation.
 
 ## How to use this repository
 
 1. Read `vision/` and TLM artefacts for *why*.  
 2. Read `product-architecture/` for *what the Teacher OS is*.  
-3. Use `capability-mapping/` and `product-architecture/teacher-os/CAPABILITY_ORCHESTRATION.md` as backlog input.  
-4. Review packages: `TLM-001` (research), `PA-001` (architecture).  
+3. Read `engineering/EBP-*` for *how to build the next vertical slices*.  
+4. Review packages: `TLM-001` · `PA-001` · `EBP-001`.  
 
 ## Stop condition
 
-**PA-001 complete. STOP. Await Product Architecture Review decision before engineering.**
+**EBP-001 blueprint complete. STOP. Await Engineering / Product review before coding Wave 1 in application repos.**
 
 ## Contribution
 
