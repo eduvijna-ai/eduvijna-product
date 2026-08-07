@@ -86,6 +86,18 @@ See `product-architecture/` and `reviews/review-packages/PA-001/`.
 
 **PA-001 complete. STOP. Await Product Architecture Review decision before engineering.**
 
+## Contribution
+
+Follow [`CONTRIBUTING.md`](CONTRIBUTING.md). Same core rules as [eduvijna-architecture](https://github.com/eduvijna/eduvijna-architecture):
+
+- No implementation code  
+- Pull requests required to `main`  
+- Product Architecture Review for material architecture changes  
+- Stable artefact IDs  
+- Markdown quality and cross-references  
+
+Ownership: see [`CODEOWNERS`](CODEOWNERS).
+
 ## Ownership
 
 EduVijna Product Office.

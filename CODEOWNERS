@@ -1,0 +1,24 @@
+# EduVijna Product — CODEOWNERS
+#
+# Product Office ownership map.
+# Pattern aligned with eduvijna-architecture CODEOWNERS.
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+*                           @eduvijna
+
+/CONTRIBUTING.md            @eduvijna
+/CODEOWNERS                 @eduvijna
+/.github/                   @eduvijna
+
+/vision/                    @eduvijna
+/memory/                    @eduvijna
+/context/                   @eduvijna
+/personas/                  @eduvijna
+/journeys/                  @eduvijna
+/jobs-to-be-done/           @eduvijna
+/pain-points/               @eduvijna
+/opportunities/             @eduvijna
+/capability-mapping/        @eduvijna
+/metrics/                   @eduvijna
+/product-architecture/      @eduvijna
+/reviews/                   @eduvijna
