@@ -1,0 +1,23 @@
+# EduVijna Product — gitignore
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Local notes
+.env
+.env.*
+*.local.md
+
+# Python / node accidents (this repo is docs-only)
+__pycache__/
+node_modules/
+dist/
+build/
