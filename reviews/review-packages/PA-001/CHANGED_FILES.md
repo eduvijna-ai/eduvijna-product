@@ -48,6 +48,32 @@ version: 0.1.0
 |------|--------|
 | `README.md` | Point to product-architecture + PA-001 |
 
+## Added — v0.2 signature experiences
+
+| Path | Role |
+|------|------|
+| `product-architecture/teacher-os/TODAYS_MISSION.md` | Login mission briefing |
+| `product-architecture/teacher-os/CONTINUOUS_CONTEXT.md` | Session/Intent thread |
+| `product-architecture/teacher-os/REVIEW_QUEUE.md` | Signature approval queue |
+| `product-architecture/wireframes/REVIEW_QUEUE.md` | Queue wireframe |
+
+## Updated — v0.2
+
+| Path | Change |
+|------|--------|
+| `product-architecture/VISION.md` | Mission, Continuous Context, Review Queue |
+| `product-architecture/README.md` | Structure + signature experiences |
+| `product-architecture/teacher-os/INFORMATION_ARCHITECTURE.md` | Mission + Queue layers |
+| `product-architecture/teacher-os/NAVIGATION_MODEL.md` | Mission-first login |
+| `product-architecture/teacher-os/SCREEN_HIERARCHY.md` | Mission + Review Queue screens |
+| `product-architecture/teacher-os/AI_ORCHESTRATION.md` | Flow via Continuous Context + Queue |
+| `product-architecture/teacher-os/CONTENT_LIFECYCLE.md` | Needs review → Queue |
+| `product-architecture/teacher-os/EXPERIENCE_PRINCIPLES.md` | Mission First, One Queue |
+| `product-architecture/wireframes/HOME.md` | Today's Mission briefing |
+| `product-architecture/wireframes/TODAY.md` | Post-mission day workspace |
+| `product-architecture/wireframes/PREPARE.md` | Generate → Review Queue |
+| `reviews/review-packages/PA-001/*` | v0.2 summary, decisions, questions |
+
 ## Foundation (unchanged inputs)
 
-TLM-001 artefacts under `vision/`, `personas/`, `journeys/`, `jobs-to-be-done/`, `pain-points/`, `opportunities/`, `capability-mapping/`, `memory/`, `context/`, `metrics/`, `reviews/review-packages/TLM-001/`.
+TLM-001 artefacts under research paths; prior PA-001 teacher-os docs remain base.

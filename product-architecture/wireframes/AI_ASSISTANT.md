@@ -24,9 +24,10 @@ Natural-language entry that **resolves to Teaching Intent or loop stage** — ne
 │   Artefacts: objectives, lesson, worksheet, quiz, homework…  │
 │   [ Confirm & open Prepare ]  [ Adjust ]  [ Just explain ]   │
 │                                                              │
-│ You: Explain chlorophyll simpler for Grade 7                 │
-│ Assistant: …explanation…  [ Pin to Teach ] [ Copy ]          │
-│ Note: Not sent to students.                                  │
+│ You: Make the worksheet harder                                       │
+│ Assistant: Updating Worksheet in this thread (Grade 8 · Photosynthesis)│
+│   [ Open in Review Queue ]                                           │
+│ Note: Not sent to students.                                          │
 ├─────────────────────────────────────────────────────────────┤
 │ [ Type a teaching goal…                              Send ]  │
 └─────────────────────────────────────────────────────────────┘

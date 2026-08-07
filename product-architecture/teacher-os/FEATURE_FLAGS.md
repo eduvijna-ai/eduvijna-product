@@ -37,6 +37,9 @@ Legacy fallback / Migration complete
 | Flag | Purpose |
 |------|---------|
 | `teacher_os_shell` | New navigation chrome |
+| `todays_mission` | Mission-first login briefing |
+| `continuous_context` | Session/Intent thread |
+| `review_queue` | Signature approval queue |
 | `teaching_intent_prepare_tomorrow` | Flagship intent |
 | `teacher_memory_v1` | Memory profile |
 | `school_context_bind` | Auto-inherit context |

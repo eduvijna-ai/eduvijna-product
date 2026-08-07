@@ -8,21 +8,51 @@ For every screen: Purpose · Primary user · Entry · Exit · Key actions · Dep
 
 ---
 
-## 0. Home / Shell
+## 0. Home / Shell / Mission
 
 ### SCR-HOME — Teacher OS Shell
 
 | Field | Definition |
 |-------|------------|
-| Purpose | Persistent chrome: primary nav, school/teacher identity, global continue |
+| Purpose | Persistent chrome: quiet primary nav, identity, queue badge, AI entry |
 | Primary user | Teacher |
 | Entry | App launch / deep link |
-| Exit | Any primary destination |
-| Key actions | Navigate; open AI Assistant; view notifications |
-| Dependencies | Auth, School Context, Teacher Memory (light) |
-| AI opportunities | None in chrome; Assistant entry only |
+| Exit | Mission, any primary destination, Review Queue |
+| Key actions | Navigate; open AI Assistant; open Review Queue badge |
+| Dependencies | Auth, School Context, Teacher Memory (light), queue counts |
+| AI opportunities | None in chrome |
 
-*Wireframe:* `../wireframes/HOME.md`
+### SCR-TODAYS-MISSION — Login landing
+
+| Field | Definition |
+|-------|------------|
+| Purpose | Mission briefing: greeting, day counts, AI readiness, Review → |
+| Primary user | Teacher |
+| Entry | **Default after every login** |
+| Exit | Review Queue; Today schedule; continue Intent |
+| Key actions | Review →; open schedule; see honest readiness copy |
+| Dependencies | Timetable, assessment schedule, PTM calendar, kit statuses |
+| AI opportunities | Overnight prep status line; prioritise queue order |
+
+*Wireframes:* `../wireframes/HOME.md`
+
+---
+
+## 0b. Review Queue
+
+### SCR-REVIEW-QUEUE
+
+| Field | Definition |
+|-------|------------|
+| Purpose | Unified review/approve of all AI outputs (signature experience) |
+| Primary user | Teacher |
+| Entry | Mission Review →; post-Generate; shell badge; Improve drafts |
+| Exit | Ready to Publish → assign/send; Teach; Mission |
+| Key actions | Open item; edit; regenerate; follow-up refine; approve; publish |
+| Dependencies | Continuous Context thread; lifecycle; explainability |
+| AI opportunities | In-thread refine (“make harder”); kit consistency hints |
+
+*Wireframe:* `../wireframes/REVIEW_QUEUE.md`
 
 ---
 
@@ -32,13 +62,13 @@ For every screen: Purpose · Primary user · Entry · Exit · Key actions · Dep
 
 | Field | Definition |
 |-------|------------|
-| Purpose | Day orientation: periods, kit readiness, alerts |
+| Purpose | Day workspace: periods, kit readiness, alerts (not login landing) |
 | Primary user | Teacher |
-| Entry | Default login; nav Today |
-| Exit | Period detail; Prepare; Teach; Assess; Improve; notice detail |
-| Key actions | Continue Prepare; Open Teach for period; Review observe alert; Mark attendance shortcut |
+| Entry | Mission → Schedule; nav Today |
+| Exit | Period detail; Prepare; Teach; Assess; Improve; Review Queue |
+| Key actions | Continue Prepare; Open Teach; Review observe alert; Attendance |
 | Dependencies | Timetable, calendar, kit statuses, notices, attendance ops |
-| AI opportunities | “What should I do next?” ranking; overnight brief |
+| AI opportunities | “What should I do next?” ranking |
 
 ### SCR-TODAY-PERIOD
 
@@ -86,13 +116,16 @@ For every screen: Purpose · Primary user · Entry · Exit · Key actions · Dep
 
 | Field | Definition |
 |-------|------------|
-| Purpose | Review orchestrated artefacts as one kit; edit; approve |
+| Purpose | *(Superseded as primary)* Deep kit edit may open from Review Queue item; canonical approval surface is **Review Queue** |
 | Primary user | Teacher |
-| Entry | After orchestration; Library open kit |
-| Exit | Approved → Teach/Library; regenerate piece; abandon |
-| Key actions | Edit artefact; regenerate one; explain why; approve kit; schedule for period |
-| Dependencies | Capability outputs, explainability, lifecycle |
+| Entry | Review Queue → Open artefact / kit |
+| Exit | Back to Review Queue |
+| Key actions | Edit artefact; regenerate; explain; approve back to queue |
+| Dependencies | Capability outputs, Continuous Context, explainability |
 | AI opportunities | Per-artefact regenerate; consistency check across kit |
+
+> Product rule: Do not maintain a separate “download kit” approval path outside Review Queue.
+
 
 ### SCR-ARTEFACT-EDITOR
 

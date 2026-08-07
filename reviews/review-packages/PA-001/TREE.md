@@ -20,6 +20,9 @@ product-architecture/
 │   ├── DAILY_LEARNING_LOOP.md
 │   ├── TEACHER_MEMORY.md
 │   ├── SCHOOL_CONTEXT.md
+│   ├── CONTINUOUS_CONTEXT.md
+│   ├── TODAYS_MISSION.md
+│   ├── REVIEW_QUEUE.md
 │   ├── AI_ORCHESTRATION.md
 │   ├── CONTENT_LIFECYCLE.md
 │   ├── CAPABILITY_ORCHESTRATION.md
@@ -35,6 +38,7 @@ product-architecture/
     ├── TEACH.md
     ├── ASSESS.md
     ├── IMPROVE.md
+    ├── REVIEW_QUEUE.md
     └── AI_ASSISTANT.md
 
 reviews/review-packages/PA-001/

@@ -3,7 +3,7 @@ id: PA-001
 title: Review Package — Teacher OS Product Architecture
 owner: EduVijna Product Office
 status: draft
-version: 0.1.0
+version: 0.2.0
 created: 2026-08-07
 last_updated: 2026-08-07
 reviewers: []
@@ -16,49 +16,43 @@ stop_condition: STOP — Await Product Architecture Review decision
 
 ## Subject
 
-Complete Teacher OS Product Architecture derived from approved TLM-001 artefacts.
+Complete Teacher OS Product Architecture derived from approved TLM-001 artefacts — **amended** with three signature experience models.
 
-## Objective
+## Amendments in v0.2
 
-Define Teacher OS as an intent-driven, loop-centred product — navigation, screens, Teaching Intent, Daily Learning Loop, Teacher Memory, School Context, orchestration, boundaries, flags, experience principles, metrics, roadmap, and markdown wireframes — **without** implementation.
+| Change | Doc | Intent |
+|--------|-----|--------|
+| **Today's Mission** | `teacher-os/TODAYS_MISSION.md` | Login = mission briefing, not navigation |
+| **Continuous Context** | `teacher-os/CONTINUOUS_CONTEXT.md` | Session thread persists across related actions |
+| **Review Queue** | `teacher-os/REVIEW_QUEUE.md` | Signature one-place approval of all AI outputs |
 
-## Scope
+## Canonical AI flow (updated)
 
-| In scope | Out of scope |
-|----------|--------------|
-| Product architecture under `product-architecture/` | React / frontend code |
-| Markdown wireframes | APIs / databases |
-| Capability reuse mapping | Prompts / AI workflow implementation |
-| Feature boundaries across OS surfaces | Backend / infra architecture diagrams |
+```text
+Teacher → Intent → Continuous Context → Capability Orchestration
+      → Review Queue → Ready to Publish → Publish
+```
 
-## Acceptance criteria status (author self-check)
+## Headline architecture decisions (additions)
+
+- D-013 Mission-first login  
+- D-014 Continuous Context distinct from Teacher Memory / School Context  
+- D-015 Review Queue is the approval cockpit (no download-as-approval)
+
+## Acceptance criteria status
 
 | Criterion | Met |
 |-----------|-----|
-| Navigation is teacher-centric | Yes — Today…Settings outcomes |
-| Product is intent-driven | Yes — Teaching Intent model |
-| Existing capabilities reused | Yes — capability orchestration maps |
-| No duplicated functionality | Yes — IA anti-patterns + boundaries |
+| Navigation is teacher-centric | Yes (+ Mission first) |
+| Product is intent-driven | Yes + Continuous Context |
+| Existing capabilities reused | Yes |
+| No duplicated functionality | Yes |
 | Teacher Memory defined | Yes |
 | School Context defined | Yes |
-| Daily Learning Loop complete | Yes + gap list |
+| Daily Learning Loop complete | Yes |
 | Capability orchestration documented | Yes |
-| Wireframes exist | Yes — Home/Today/Prepare/Teach/Assess/Improve/AI |
+| Wireframes exist | Yes (+ Review Queue; Home = Mission) |
 | Review package complete | Yes |
-
-## Headline architecture decisions
-
-1. Top nav = **Today · Prepare · Teach · Assess · Improve · Library · AI Assistant · Settings** (Library + Settings added vs TLM shell for reuse and control).  
-2. Generators are **services under Intent**, never peer top-level nav.  
-3. Canonical AI flow: Teacher → Intent → Capability Orchestration → Review → Publish.  
-4. Observe lives inside Teach screens; Analyze lives inside Assess; both hand off to Improve.  
-5. Rollout via Preview → Pilot → GA with legacy fallback.
-
-## Recommended outcomes
-
-- **Approve** — proceed to engineering blueprints under EAO/Product process  
-- **Approve with conditions** — resolve OPEN_QUESTIONS  
-- **Request changes** — adjust nav or intent catalogue  
 
 ## Stop
 

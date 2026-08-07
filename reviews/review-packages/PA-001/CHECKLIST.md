@@ -33,7 +33,10 @@ version: 0.1.0
 - [ ] School Context defined
 - [ ] Daily Learning Loop complete (incl. gaps)
 - [ ] Capability orchestration documented
-- [ ] Wireframes exist (Home, Today, Prepare, Teach, Assess, Improve, AI)
+- [ ] Wireframes exist (Home/Mission, Today, Prepare, Teach, Assess, Improve, Review Queue, AI)
+- [ ] Today's Mission defined (login briefing)
+- [ ] Continuous Context defined (session thread)
+- [ ] Review Queue defined (signature approval)
 - [ ] Review package complete (SUMMARY, TREE, CHANGED_FILES, CHECKLIST, OPEN_QUESTIONS, DECISIONS)
 
 ## D. Deliverables present

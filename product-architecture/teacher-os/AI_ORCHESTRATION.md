@@ -13,12 +13,18 @@ Teacher
    ↓
 Teaching Intent
    ↓
+Continuous Context (thread opens)
+   ↓
 Capability Orchestration
    ↓
-Review
+Review Queue          ← signature experience
    ↓
-Publish
+Ready to Publish
+   ↓
+Publish (explicit)
 ```
+
+Follow-ups (“make worksheet harder”) stay inside **Continuous Context** and update the focused Review Queue item — they do not restart the Intent from zero.
 
 ---
 
@@ -26,16 +32,24 @@ Publish
 
 ### 1. Teacher
 
-Expresses outcome in Teacher OS (Prepare, Assess, Improve, or AI Assistant).  
+Expresses outcome in Teacher OS (Prepare, Assess, Improve, AI Assistant, or Mission → Review).  
 May attach sources.  
-Sees Memory + Context chips — does not re-enter school facts.
+Sees Memory + Context chips — does not re-enter school facts.  
+May refine with short directives while Continuous Context is active.
 
 ### 2. Teaching Intent
 
 OS normalises the request into an Intent type + parameters (class, topic, when, artefact checklist).  
-Assistant chat **proposes** an Intent; teacher confirms before orchestration.
+Assistant chat **proposes** an Intent; teacher confirms before orchestration.  
+Opens a Continuous Context thread.
 
-### 3. Capability Orchestration
+### 3. Continuous Context
+
+Holds active Intent, artefacts in play, recent directives, and queue focus.  
+Distinct from durable Teacher Memory and institutional School Context.  
+See `CONTINUOUS_CONTEXT.md`.
+
+### 4. Capability Orchestration
 
 OS selects and sequences **existing EduVijna capabilities** (and declared new kit parts) to draft artefacts.  
 Product requirements:
@@ -43,23 +57,26 @@ Product requirements:
 - Prefer reuse over new parallel generators  
 - Keep kit coherent (same topic, difficulty band, language)  
 - Attach explainability per artefact and for the kit  
-- Respect quotas / entitlements as user-visible constraints (not infra detail)
+- Respect quotas / entitlements as user-visible constraints (not infra detail)  
+- **Every output enters Review Queue**
 
-### 4. Review
+### 5. Review Queue
 
-Teacher lands on **Kit Review** (or single-artefact review for narrow intents).  
-Actions: edit · regenerate one · remove · explain · approve subset · reject.
+Teacher lands on the **Review Queue** (kit-grouped), not a pile of downloads.  
+Actions: edit · regenerate one · follow-up refine · explain · approve subset · reject.  
+See `REVIEW_QUEUE.md`.
 
-**AI never skips Review for student/parent-facing outputs.**
+**AI never skips Review Queue for student/parent-facing outputs.**
 
-### 5. Publish
+### 6. Ready to Publish → Publish
 
-Publish means: make available to the intended audience under policy.
+Approved items appear in Ready to Publish.  
+Publish/Assign/Send is an explicit second step.
 
 | Audience | Gate |
 |----------|------|
-| Teacher-only (lesson notes) | Approve to Library / Teach |
-| Students | Explicit publish/assign after approval |
+| Teacher-only (lesson notes) | Approve → available in Teach/Library |
+| Students | Explicit assign after approval |
 | Parents | Explicit send after approval |
 | Report cards / official marks | Explicit confirm into records |
 

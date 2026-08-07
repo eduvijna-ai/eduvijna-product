@@ -24,7 +24,10 @@ Product architecture decisions proposed for review. Not ADRs for infrastructure.
 | D-010 | Admin Console owns ERP master data; Teacher OS consumes Context | Feature boundaries; no overlap | Proposed |
 | D-011 | Markdown wireframes only in PA-001 | No Figma/React in this review | Proposed |
 | D-012 | Existing worksheet/quiz/lesson/ingest/analytics/OpenQuiz reused as services | No duplicated functionality | Proposed |
+| D-013 | Login lands on Today's Mission briefing; nav is secondary | Teachers need day load + Review CTA, not a menu | Proposed |
+| D-014 | Continuous Context = session/Intent thread; distinct from Teacher Memory & School Context | “Make worksheet harder” must not forget Grade/topic | Proposed |
+| D-015 | Review Queue is signature approval surface; all AI outputs enter it before publish | Replace one-by-one downloads; Mission Review → opens queue | Proposed |
 
 ## Supersedes / extends
 
-Extends TLM-001 models into architecture. Does not invalidate TLM research; navigation expands with Library + Settings.
+Extends TLM-001 models into architecture. v0.2 adds Mission, Continuous Context, and Review Queue without invalidating prior PA decisions; Kit Review is subordinated to Review Queue as the canonical approval path.

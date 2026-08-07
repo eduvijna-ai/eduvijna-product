@@ -26,67 +26,79 @@
 
 ## Experience principles (normative)
 
-### 1. One Conversation
+### 1. Mission First
 
-A Teaching Intent is one conversation. Teachers should not restart context across six tools.
+Login opens Today's Mission briefing. Navigation is secondary to the day's load and Review CTA.
 
-### 2. Minimum Clicks
+### 2. One Conversation
+
+A Teaching Intent + Continuous Context is one conversation. Teachers should not restart context across six tools or lose Grade/topic on “make it harder.”
+
+### 3. Minimum Clicks
 
 Defaults from Teacher Memory + School Context. Every extra required field must justify itself.
 
-### 3. Always Explain AI
+### 4. Always Explain AI
 
-Every draft shows *why* (chapter, difficulty, Bloom, evidence). Explain is one tap from any artefact.
+Every draft shows *why* (chapter, difficulty, Bloom, evidence). Explain is one tap from any Review Queue item.
 
-### 4. Teacher Control
+### 5. Teacher Control
 
-Edit, regenerate, remove, approve, reject — always available before publish.
+Edit, regenerate, remove, approve, reject — always available in Review Queue before publish.
 
-### 5. Never Surprise Users
+### 6. Never Surprise Users
 
-No silent sends. Status badges are honest. Orchestration progress is visible.
+No silent sends. Status badges are honest. Orchestration progress is visible. Mission copy is honest when AI is not fully ready.
 
-### 6. Progressive Disclosure
+### 7. Progressive Disclosure
 
-Kit summary first; deep editors on demand. Advanced generator controls behind Intent, not in primary nav.
+Mission summary first; Review Queue list next; deep editors on demand.
 
-### 7. Context Awareness
+### 8. Context Awareness
 
-Chips show school/class/board/period. Wrong context is easier to spot than to retype.
+Chips show school/class/board/period **and** Continuous Context thread. Wrong context is easier to spot than to retype.
 
-### 8. Fast Review
+### 9. Fast Review
 
-Approve path optimised for “good enough with ≤2 edits.” Scanning beats scrolling novels of AI text.
+Review Queue optimised for “good enough with ≤2 edits.” Approve path beats download path.
 
-### 9. Loop Continuity
+### 10. Loop Continuity
 
-Every Analyze view offers an Improve action. Every Improve action can seed Prepare Again.
+Every Analyze view offers an Improve action. Every Improve draft enters Review Queue. Every Improve action can seed Prepare Again.
 
-### 10. Calm under chaos
+### 11. Calm under chaos
 
-Today and Cover flows prioritise recovery when the day breaks — not perfect plans.
+Mission and Cover flows prioritise recovery when the day breaks — not perfect plans.
 
-### 11. Language dignity
+### 12. Language dignity
 
 Parent and teacher language preferences respected without shame or hidden English-only paths.
 
-### 12. Reuse over rebuild
+### 13. Reuse over rebuild
 
 Library duplicate is celebrated; blank-page create is secondary.
+
+### 14. One Queue to Publish
+
+All AI outputs enter Review Queue. Ready to Publish is explicit. No one-by-one file hunting as the primary path.
 
 ---
 
 ## Anti-patterns
 
 - Generator dashboards as home  
+- Navigation-first login  
 - Walls of unread AI prose  
 - Hidden auto-assign to students  
 - Forcing board entry every generate  
 - Dead-end analytics  
+- Mid-kit amnesia (“which class?”)  
+- Download-as-approval  
 
 ---
 
 ## Related
 
 - `../../vision/PRODUCT_PRINCIPLES.md`  
+- `TODAYS_MISSION.md` · `CONTINUOUS_CONTEXT.md` · `REVIEW_QUEUE.md`  
 - Wireframes must cite these principles in page purposes

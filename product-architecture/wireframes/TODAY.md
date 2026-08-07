@@ -7,30 +7,40 @@
 
 ## Purpose
 
-Answer: *What matters in my school day right now?*
+Day workspace after Mission — schedule, period cards, alerts.
 
 ## TODAY overview
 
 ```text
 ┌─────────────────────────────────────────────────────────────┐
-│ Today · Friday 7 Aug                        [Overnight brief]│
-│ Next up: Period 3 · 7-B Science · 11:10                      │
+│ Today · Friday 7 Aug              [← Mission] [Review queue]│
+│ From Mission: 4 Classes · 2 Assessments · 1 PTM             │
 ├─────────────────────────────────────────────────────────────┤
 │ CONTINUE                                                     │
-│ [▶ Resume Prepare Tomorrow — Photosynthesis kit 80%]         │
-│ [▶ Review exit check — 12 students flagged]                  │
+│ [▶ Review Queue — 5 items ready]                             │
+│ [▶ Resume Prepare — Photosynthesis thread]                   │
 ├─────────────────────────────────────────────────────────────┤
 │ TIMETABLE                                                    │
-│ P1 6-A Sci    Kit ✓ Ready     [Open Teach]                   │
+│ P1 6-A Sci    Kit ✓ Approved    [Open Teach]                 │
 │ P2 Free       —                                              │
-│ P3 7-B Sci    Kit ◐ Review    [Continue Prepare]             │
-│ P4 8-A Sci    Kit ✓ Ready     [Open Teach]                   │
-│ P5 Cover?     Alert           [Recover Lost Period]          │
+│ P3 7-B Sci    Kit ◐ In queue    [Open Review]                │
+│ P4 8-A Sci    Kit ✓ Approved    [Open Teach]                 │
+│ P5 Cover?     Alert             [Recover Lost Period]        │
 ├─────────────────────────────────────────────────────────────┤
 │ NOTICES (school)                                             │
 │ · Assembly overrun Period 1 tomorrow                         │
 └─────────────────────────────────────────────────────────────┘
 ```
+
+## Entry / Exit
+
+| Entry | Exit |
+|-------|------|
+| Mission → Schedule; nav Today | Review Queue, Prepare, Teach, Assess, Improve |
+
+## Principles
+
+Mission first · Loop continuity · Calm under chaos
 
 ## Period detail (expand P3)
 

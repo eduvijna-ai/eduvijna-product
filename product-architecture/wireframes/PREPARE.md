@@ -51,6 +51,8 @@ Turn Teaching Intent into an approved kit.
 └─────────────────────────────────────────────────────────────┘
 ```
 
+> After **Generate**, teacher lands in **Review Queue** for this kit with Continuous Context active — not a download folder.
+
 ## Kit review
 
 ```text

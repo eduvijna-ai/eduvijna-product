@@ -10,9 +10,11 @@
 
 **EduVijna Teacher OS** is the teacher-centric operating system for teaching life.
 
-Teachers express **Teaching Intents**.  
-The OS orchestrates existing EduVijna capabilities into reviewable kits.  
-Teachers approve. Students and parents receive only what teachers publish.  
+Teachers land on **Today's Mission** — a briefing, not a menu.  
+They express **Teaching Intents**.  
+**Continuous Context** keeps the session coherent across related refinements.  
+The OS orchestrates existing EduVijna capabilities into the **Review Queue**.  
+Teachers approve in one place. Students and parents receive only what teachers publish.  
 **Teacher Memory** and **School Context** make every interaction feel continuous and school-correct.  
 The **Daily Learning Loop** ensures every artefact feeds the next teaching move.
 
@@ -22,9 +24,11 @@ The **Daily Learning Loop** ensures every artefact feeds the next teaching move.
 
 | Is | Is not |
 |----|--------|
+| Mission briefing on login | A navigation-first home |
 | Outcome-oriented (Prepare, Teach, Assess, Improve) | A menu of generators |
-| Intent-driven | Chatbot bolted onto ERP |
-| Memory- and context-aware | First-time assistant every login |
+| Intent-driven + Continuous Context | Chatbot that forgets mid-kit |
+| Review Queue as signature approval | Download-one-by-one AI files |
+| Memory- and school-context-aware | First-time assistant every login |
 | A loop that compounds | Dead-end content demos |
 | Teacher-controlled | Autonomous publisher to students/parents |
 

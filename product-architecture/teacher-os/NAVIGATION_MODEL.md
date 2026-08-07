@@ -17,17 +17,25 @@ Today | Prepare | Teach | Assess | Improve | Library | AI Assistant | Settings
 
 ## Destination contracts
 
+### Today's Mission (login landing — not a nav peer)
+
+- **Job:** Mission briefing  
+- **Default landing** after every login  
+- Surfaces: greeting, day counts (classes / assessments / PTM), AI readiness line, **Review →**  
+- Hands off to Review Queue (hero), Today schedule (secondary)  
+- See `TODAYS_MISSION.md`
+
 ### Today
 
-- **Job:** Orient and continue  
-- **Default landing** after login on school days  
-- Surfaces: timetable strip, readiness of kits, observe alerts, notices, continue actions  
-- Does **not** create deep artefacts (hands off to Prepare/Teach/Assess)
+- **Job:** Full day workspace (schedule, period cards, notices, continue)  
+- Surfaces: timetable strip, readiness of kits, observe alerts  
+- Does **not** replace Mission as first viewport  
 
 ### Prepare
 
-- **Job:** Intent → kit  
-- Primary: Teaching Intent composer + kit review  
+- **Job:** Intent → orchestration → **Review Queue**  
+- Primary: Teaching Intent composer  
+- After Generate: land in Review Queue for that kit (Continuous Context active)  
 - Secondary: week/unit plan, source attach  
 
 ### Teach
@@ -39,11 +47,19 @@ Today | Prepare | Teach | Assess | Improve | Library | AI Assistant | Settings
 
 - **Job:** Evidence create / conduct / evaluate / analyze  
 - Primary: assessments, attempts, scoring review, heatmaps  
+- New AI drafts still enter Review Queue before student publish  
 
 ### Improve
 
 - **Job:** Act and compound  
 - Primary: remediation, pacing, parent/PTM/remarks drafts, memory insights  
+- Drafts enter Review Queue  
+
+### Review Queue (signature surface)
+
+- **Job:** Review and approve all AI outputs in one place  
+- Entry: Mission **Review →**, post-Generate, shell badge  
+- See `REVIEW_QUEUE.md`  
 
 ### Library
 
@@ -53,8 +69,9 @@ Today | Prepare | Teach | Assess | Improve | Library | AI Assistant | Settings
 
 ### AI Assistant
 
-- **Job:** Conversational entry that resolves to Intent or Loop stage  
-- Never silent-publish  
+- **Job:** Conversational entry that resolves to Intent or loop stage  
+- Shares **Continuous Context** with active Intent/thread  
+- Never silent-publish — outputs enter Review Queue  
 
 ### Settings
 
@@ -67,10 +84,13 @@ Today | Prepare | Teach | Assess | Improve | Library | AI Assistant | Settings
 
 | Rule | Meaning |
 |------|---------|
+| Mission first | Login opens Today's Mission, not a nav menu |
 | Single primary home | Each capability has one canonical nav parent |
+| Review is the cockpit | All AI outputs pass Review Queue before publish |
+| Continuous Context | Related follow-ups stay in one thread |
 | Deep links allowed | Assess may open a quiz created in Prepare without moving ownership |
-| Status travels | Artefact lifecycle status visible wherever opened |
-| Intent continuity | Starting Intent from AI Assistant opens Prepare kit flow |
+| Status travels | Artefact lifecycle + queue state visible wherever opened |
+| Intent continuity | Starting Intent from AI Assistant opens Prepare → Queue |
 | No generator nav | Worksheet/Quiz/PPT never appear as peer top-level items |
 
 ---
@@ -79,21 +99,21 @@ Today | Prepare | Teach | Assess | Improve | Library | AI Assistant | Settings
 
 | Context | Expectation |
 |---------|-------------|
-| Phone | Today + Teach + quick Approve dominate; Prepare review possible |
-| Desktop / laptop | Full Prepare kit review, Assess evaluation, Library browsing |
-| Low connectivity | Today roster/attendance and previously approved kits remain usable offline-first *as product requirement* (implementation later) |
+| Phone | Mission briefing + Review Queue dominate; Teach quick actions |
+| Desktop / laptop | Full kit review in Queue; Analyze; Library browsing |
+| Low connectivity | Last approved kits + Mission counts from cache (product requirement) |
 
 ---
 
 ## Entry after login
 
-1. If school day and next period within N minutes → **Today** focused on that period  
-2. Else if incomplete kit for tomorrow → **Prepare** continue  
-3. Else → **Today** overview  
+1. **Always** → Today's Mission briefing  
+2. Hero CTA → Review Queue (today filter)  
+3. Secondary → Today schedule / continue Intent  
 
 ---
 
 ## Related
 
-- Wireframes: `../wireframes/`  
+- Wireframes: `../wireframes/HOME.md`, `REVIEW_QUEUE.md`, `TODAY.md`  
 - Screen hierarchy: `SCREEN_HIERARCHY.md`

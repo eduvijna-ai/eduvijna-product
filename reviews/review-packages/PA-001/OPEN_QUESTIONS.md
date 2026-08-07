@@ -17,4 +17,7 @@ version: 0.1.0
 7. Who entitles School Pilot flags — Product, Sales, or school Admin?  
 8. Offline-first Today/Teach: Phase 1 requirement or later?  
 9. Naming: “Teacher OS” externally vs “EduVijna for Teachers”?  
-10. After Approve, what ID starts engineering blueprint (EBP-xxx) and which repo implements first?
+10. After Approve, what ID starts engineering blueprint (EBP-xxx) and which repo implements first?  
+11. Should **Review** become an explicit top-level nav item, or remain Mission + badge + Prepare entry only?  
+12. Continuous Context lifespan: until logout, until Intent archived, or explicit “End thread”?  
+13. Today's Mission counts: include only *this teacher’s* load, or class-teacher aggregate duties too?

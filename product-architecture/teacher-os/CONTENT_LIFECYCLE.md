@@ -18,11 +18,11 @@ Idea / Intent Draft
         ↓
 Assembling (orchestration in progress)
         ↓
-Ready for Review
+Needs review          ← enters Review Queue
         ↓
-In Review (teacher editing)
+In review (teacher editing / Continuous Context refine)
         ↓
-Approved (teacher-only)
+Approved (Ready to Publish)
         ↓
 Published / Assigned (students or parents — if applicable)
         ↓
@@ -31,7 +31,7 @@ Completed (attempts/feedback in)
 Archived (Library history)
 ```
 
-Optional: **Superseded** when a newer kit replaces an older for the same period.
+Optional: **Superseded** when Continuous Context regenerate replaces an older draft for the same queue item.
 
 ---
 
@@ -39,13 +39,16 @@ Optional: **Superseded** when a newer kit replaces an older for the same period.
 
 | From → To | Who | Rule |
 |-----------|-----|------|
-| Draft → Assembling | Teacher (Generate) | Intent validated |
-| Assembling → Ready | System | All requested artefacts attempted |
-| Ready → In Review | Teacher | Opens kit |
-| In Review → Approved | Teacher | Explicit approve (full or partial) |
-| Approved → Published | Teacher | Explicit assign/send |
+| Draft → Assembling | Teacher (Generate) | Intent validated; Continuous Context opens |
+| Assembling → Needs review | System | Artefacts appear in Review Queue |
+| Needs review → In review | Teacher | Opens queue item |
+| In review → Approved | Teacher | Explicit approve (full or partial) |
+| Approved → Published | Teacher | Explicit assign/send from Ready to Publish |
 | Published → Completed | System + Teacher | Attempts closed / marked |
 | Any → Archived | Teacher or policy | Remains searchable in Library |
+
+**Product rule:** Student/parent-facing artefacts cannot jump to Published without Review Queue approval.
+
 
 ---
 

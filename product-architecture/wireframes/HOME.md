@@ -1,62 +1,85 @@
-# Wireframe — Home / Shell
+# Wireframe — Home / Today's Mission
 
 **ID:** WF-HOME  
-**Screen:** SCR-HOME  
+**Screens:** SCR-HOME shell + SCR-TODAYS-MISSION (login landing)  
 **Fidelity:** Markdown structural wireframe only
 
 ---
 
 ## Purpose
 
-Persistent Teacher OS chrome. Orient identity and navigate outcomes.
+First viewport after login is a **mission briefing**, not a navigation menu.
 
-## Layout (desktop)
+## Login landing (first viewport)
 
 ```text
 ┌──────────────────────────────────────────────────────────────────────────┐
-│ EduVijna Teacher OS          [School name]     [Ananya ▾]  [🔔] [AI]   │
+│ EduVijna                                    [School]  [Ananya]  [🔔 5]   │
+├──────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│                         Good Morning, Ananya                             │
+│                                                                          │
+│                         Today's Mission                                  │
+│                                                                          │
+│                         4 Classes                                        │
+│                         2 Assessments                                    │
+│                         1 PTM                                            │
+│                                                                          │
+│                         AI prepared everything                           │
+│                                                                          │
+│                         [  Review →  ]                                   │
+│                                                                          │
+│              Schedule · Continue last Intent · Review queue (5)          │
+│                                                                          │
 ├──────────┬───────────────────────────────────────────────────────────────┤
-│ TODAY    │                                                               │
-│ PREPARE  │                     {Outlet: active destination}              │
-│ TEACH    │                                                               │
-│ ASSESS   │                                                               │
-│ IMPROVE  │                                                               │
-│ LIBRARY  │                                                               │
-│──────────│                                                               │
-│ AI Assist│                                                               │
-│ Settings │                                                               │
+│ TODAY    │  (nav quiet until teacher leaves mission)                     │
+│ PREPARE  │                                                               │
+│ …        │                                                               │
 └──────────┴───────────────────────────────────────────────────────────────┘
 ```
 
-## Layout (mobile)
+## If AI is not fully ready (honest copy)
+
+```text
+AI prepared 3 of 4 periods
+[ Review ready → ]   [ Finish remaining ]
+```
+
+## Mobile
 
 ```text
 ┌─────────────────────┐
-│ School · Ananya  🔔 │
-├─────────────────────┤
-│ {Outlet}            │
+│ Good Morning        │
+│ Today's Mission     │
 │                     │
+│ 4 Classes           │
+│ 2 Assessments       │
+│ 1 PTM               │
+│                     │
+│ AI prepared         │
+│ everything          │
+│                     │
+│ [ Review → ]        │
+│                     │
+│ Schedule · Queue    │
 ├─────────────────────┤
 │ Today Prepare Teach │
-│ Assess Improve More │
 └─────────────────────┘
 ```
 
-More → Library · AI · Settings
-
-## Key elements
+## Key behaviours
 
 | Element | Behaviour |
 |---------|-----------|
-| Nav | Single primary destination highlighted |
-| AI | Opens Assistant overlay/sheet |
-| Bell | Notices + observe alerts |
-| Identity | School Context chip + teacher |
+| Review → | Opens Review Queue filtered to today's Needs review / Approved-ready |
+| Schedule | Opens Today workspace |
+| Bell badge | Count of queue + alerts |
+| Nav | Available but not the hero |
 
-## Principles cited
+## Principles
 
-One Conversation (nav outcomes) · Never Surprise (clear location) · Context Awareness (school chip)
+Mission first · Fast Review · Never Surprise · Minimum Clicks
 
 ## Non-goals
 
-No generator icons in primary nav.
+No generator shortcuts on the first viewport.

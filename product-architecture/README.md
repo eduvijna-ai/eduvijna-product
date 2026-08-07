@@ -40,6 +40,9 @@ product-architecture/
 │   ├── DAILY_LEARNING_LOOP.md
 │   ├── TEACHER_MEMORY.md
 │   ├── SCHOOL_CONTEXT.md
+│   ├── CONTINUOUS_CONTEXT.md
+│   ├── TODAYS_MISSION.md
+│   ├── REVIEW_QUEUE.md
 │   ├── AI_ORCHESTRATION.md
 │   ├── CONTENT_LIFECYCLE.md
 │   ├── CAPABILITY_ORCHESTRATION.md
@@ -55,10 +58,17 @@ product-architecture/
     ├── TEACH.md
     ├── ASSESS.md
     ├── IMPROVE.md
+    ├── REVIEW_QUEUE.md
     └── AI_ASSISTANT.md
 ```
 
 Review package: `../reviews/review-packages/PA-001/`
+
+## Signature experiences (PA-001 amendments)
+
+1. **Today's Mission** — login briefing (not nav-first)  
+2. **Continuous Context** — session thread across related actions  
+3. **Review Queue** — one place to approve all AI outputs  
 
 ## Approved inputs only
 
@@ -66,16 +76,17 @@ Review package: `../reviews/review-packages/PA-001/`
 - JTBD · Pain Points · Capability Mapping  
 - Product Principles · North Star  
 - Teaching Intent · Teacher Memory · School Context · Daily Learning Loop refinements  
+- PA-001 amendments: Today's Mission · Continuous Context · Review Queue  
 
 ## Reading order
 
 1. `VISION.md`  
-2. `teacher-os/INFORMATION_ARCHITECTURE.md` + `NAVIGATION_MODEL.md`  
-3. `TEACHING_INTENT_MODEL.md` + `DAILY_LEARNING_LOOP.md`  
-4. `TEACHER_MEMORY.md` + `SCHOOL_CONTEXT.md`  
-5. `AI_ORCHESTRATION.md` + `CAPABILITY_ORCHESTRATION.md` + `CONTENT_LIFECYCLE.md`  
+2. `teacher-os/TODAYS_MISSION.md` · `CONTINUOUS_CONTEXT.md` · `REVIEW_QUEUE.md`  
+3. `INFORMATION_ARCHITECTURE.md` + `NAVIGATION_MODEL.md`  
+4. Intent / Loop / Memory / School Context  
+5. Orchestration + lifecycle  
 6. Boundaries, flags, experience, metrics, roadmap  
-7. `wireframes/`  
+7. `wireframes/` (especially HOME + REVIEW_QUEUE)  
 8. `reviews/review-packages/PA-001/`  
 
 ## Stop condition
