@@ -45,7 +45,12 @@ A teacher must be able to **use something after every sprint**.
 
 ### Engineering constitution (mandatory before Sprint 0)
 
-**[`../ENGINEERING_STANDARDS.md`](../ENGINEERING_STANDARDS.md)** must be accepted before Sprint 0 coding starts.
+**EBP-000 Engineering Constitution v1.0** is **frozen**.
+
+Start at [`../ENGINEERING_CONSTITUTION.md`](../ENGINEERING_CONSTITUTION.md) and [`../REVIEW_CHECKLIST.md`](../REVIEW_CHECKLIST.md).  
+Implementation decisions: [`../edrs/`](../edrs/) (EDRs — not architecture ADRs).
+
+Sprint 0 coding starts only after Product + Engineering acknowledge v1.0.
 
 Forbidden for Wave 1:
 
