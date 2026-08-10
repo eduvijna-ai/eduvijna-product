@@ -11,7 +11,7 @@
 | Type | Web | API | When |
 |------|-----|-----|------|
 | **Unit** | Vitest | pytest | Logic, flags, mappers, lifecycle transitions |
-| **Integration** | Client + mocked/real API as project practice | httpx/pytest | generate → Teacher Review → Approved |
+| **Integration** | Client + mocked/real API as project practice | httpx/pytest | generate → In Review → Approved |
 | **End-to-end** | Playwright | — | Mission, nav, Review Queue happy paths; Continuous Context refine |
 | **Accessibility** | axe / Playwright a11y | — | New interactive Teacher OS surfaces |
 | **Regression** | Existing smoke packs | Platform/generation packs | Auth, generators, flag-off classic flows |

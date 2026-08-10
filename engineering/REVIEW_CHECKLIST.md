@@ -13,7 +13,7 @@
 | 1 | **Architecture preserved?** Implementation does not alter approved PA-001 / Artifact / Intent-Work / Mission / Queue models | ☐ |
 | 2 | **Product behavior preserved?** Teacher outcomes match approved journeys/principles (AI Assists, Teacher Decides) | ☐ |
 | 3 | **Existing capabilities reused?** Generators/platform content orchestrated — not forked/rewritten without approval | ☐ |
-| 4 | **Artifact lifecycle unchanged?** Draft → AI Generated → Teacher Review → Approved → Published → Archived respected | ☐ |
+| 4 | **Artifact lifecycle unchanged?** ADR-046: Draft → Generating → Generated → In Review → Approved → Published → Archived (no type exceptions) | ☐ |
 | 5 | **Intent vs Work preserved?** Intent not used as durable store; Work/Artifacts persist correctly | ☐ |
 | 6 | **Tests passed?** Unit + integration/E2E as required; principle tests if touching generate/publish | ☐ |
 | 7 | **Accessibility checked?** New UI keyboard/semantics/contrast addressed | ☐ |

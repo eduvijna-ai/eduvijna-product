@@ -2,7 +2,8 @@
 
 **ID:** PA-REVIEW-Q-001  
 **Status:** Draft — PA-001 Amendment  
-**Role:** Signature Teacher OS experience — one place to review and approve AI outputs
+**Role:** Signature Teacher OS experience — one place to review and approve AI outputs  
+**Binding decision:** **ADR-048** — Review Queue owns approval (teacher judgement only)
 
 ---
 
@@ -14,23 +15,38 @@ EduVijna needs a **single review surface**.
 
 ---
 
+## Ownership (ADR-048)
+
+**Review Queue owns teacher judgement.**
+
+It does **not** own generation, editing as a product, or orchestration.
+
+| Owns | Does not own |
+|------|----------------|
+| Review · Approve · Reject · Regenerate (request) · Request explanation · Open editor | Generate · Full authoring · Orchestration |
+
+Allowed actions only — nothing more. Regenerating and opening an editor are **hand-offs**; the queue remains the approval cockpit.
+
+---
+
 ## Definition
 
 **Review Queue** is the unified, **type-agnostic** list of **Artifacts** awaiting teacher judgement.
 
-Per Decision A (*Everything is an Artifact*), the queue does not care whether the item is a worksheet, quiz, PPT, or parent draft — it operates on Artifact lifecycle state.
+Per Decision A (*Everything is an Artifact*), the queue does not care whether the item is a worksheet, quiz, PPT, or parent draft — it operates on Artifact lifecycle state (**ADR-046**).
 
 Every AI-generated Artifact that could reach a student, parent, or official record **must enter the Review Queue** before publish.
 
 ```text
 Capability Orchestration
         ↓
-Artifacts (AI Generated)
+Artifacts (Generated)
         ↓
-Review Queue (generic)
+Review Queue (generic) — ADR-048 teacher judgement
   · any artifact_type
+  · status: In Review (ADR-046)
         ↓
-Teacher Review → Approved
+In Review → Approved
         ↓
 Published (explicit)
 ```
@@ -80,6 +96,8 @@ Published (explicit)
 | Published | Assigned/sent |
 | Dismissed | Rejected / not using |
 
+Canonical Artifact lifecycle names remain **ADR-046** (Draft → Generating → Generated → In Review → Approved → Published → Archived).
+
 ---
 
 ## Review Queue UX behaviour
@@ -90,15 +108,17 @@ Published (explicit)
 - Filter: Today · Needs review · Approved · All  
 - Badges: explain available, edited, Continuous Context thread  
 
-### Item actions
+### Item actions (ADR-048)
 
 | Action | Result |
 |--------|--------|
-| Open | Preview + edit + explain |
-| Approve | Moves to Ready to Publish |
+| Review / Open | Preview; may open editor (hand-off) |
+| Approve | Moves toward Ready to Publish |
+| Reject | Dismiss / decline |
 | Approve all in kit | When teacher confirms |
-| Regenerate | Keeps Continuous Context; new draft replaces or versions |
-| Make harder / shorter… | Follow-up via Continuous Context |
+| Regenerate | Request new version via capability (not in-queue generation) |
+| Request explanation | Show *why* |
+| Make harder / shorter… | Follow-up via Continuous Context (refine request) |
 | Remove | Dismiss from kit |
 | Publish / Assign / Send | Only from Approved items; explicit |
 
@@ -115,6 +135,7 @@ Shows approved items ready for audience delivery — still requires explicit Pub
 3. **One conversation** — regenerating from queue stays in Continuous Context.  
 4. **Mission CTA** — Today's Mission “Review →” opens queue filtered to today.  
 5. **Not a download manager** — primary verb is Review/Approve, not Download (download/print remain secondary).  
+6. **ADR-048** — queue never generates; never owns orchestration; open editor is hand-off only.  
 
 ---
 
@@ -141,6 +162,7 @@ A teacher can approve an entire Prepare Tomorrow kit (lesson, worksheet, quiz, P
 
 ## Related
 
+- **ADR-048** Review Queue owns approval  
 - `AI_ORCHESTRATION.md`  
 - `CONTENT_LIFECYCLE.md`  
 - `TODAYS_MISSION.md`  

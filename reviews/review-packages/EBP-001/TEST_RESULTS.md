@@ -1,20 +1,10 @@
 ---
-id: EBP-001-TEST-RESULTS
-title: EBP-001 — Test Results
+id: EBP-001-TEST
+title: EBP-001 Test Results
 ---
 
-# Test Results
+# Test results — EBP-001.4
 
-**Status:** Not yet available — blueprint pre-implementation.
+See `engineering/EBP-001/TEST_RESULTS.md` for the latest suite table.
 
-| Suite | Result | Evidence |
-|-------|--------|----------|
-| Web unit (Vitest) | Pending Sprint 0+ | |
-| Web E2E (Playwright) | Pending | |
-| API pytest | Pending | |
-| Accessibility | Pending | |
-| Regression | Pending | |
-| Performance Mission &lt;2s | Pending Sprint 3–4 | |
-| Rollback drill | Pending Sprint 4 | |
-
-Update this file as slices merge.
+**Focus:** Intent Continue → Preparing kit → Open Review Queue → placeholder; flag OFF regression.

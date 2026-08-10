@@ -47,6 +47,7 @@ product-architecture/
 │   ├── CONTENT_LIFECYCLE.md
 │   ├── CAPABILITY_ORCHESTRATION.md
 │   ├── FEATURE_BOUNDARIES.md
+│   ├── ADRS.md
 │   ├── FEATURE_FLAGS.md
 │   ├── EXPERIENCE_PRINCIPLES.md
 │   ├── SUCCESS_METRICS.md
@@ -75,7 +76,13 @@ Review package: `../reviews/review-packages/PA-001/`
 | Decision | Doc |
 |----------|-----|
 | A — Everything is an Artifact | `teacher-os/ARTIFACT_MODEL.md` |
+| **ADR-046** — One Artifact Status Lifecycle (no exceptions) | `eduvijna-architecture/decisions/ADR-046-…` |
 | B — Intent stateless / Work stateful | `teacher-os/INTENT_AND_WORK.md` |
+| **ADR-042** — Shell owns UX, not generators | `eduvijna-architecture/decisions/ADR-042-…` |
+| **ADR-043** — Foundation → Hardening → Review → Next Capability | `eduvijna-architecture/decisions/ADR-043-…` |
+| **ADR-044** — AI Platform behind stable product services | `eduvijna-architecture/decisions/ADR-044-…` |
+| **ADR-045** — Teaching Intent owns goals (**constitutional**) | `eduvijna-architecture/decisions/ADR-045-…` |
+| **ADR-047** — “Help me prepare tomorrow” (outcome-first) | `eduvijna-architecture/decisions/ADR-047-…` |
 
 ## Wave 2 product addition
 

@@ -59,7 +59,7 @@ Do **not** introduce a second Teacher-OS-only error JSON shape.
 
 1. Request bodies validated via existing Pydantic/schema patterns.  
 2. Reject unknown critical fields that would bypass lifecycle (e.g. client forcing `Published`).  
-3. Lifecycle transitions validated server-side (Teacher Review → Approved → Published).  
+3. Lifecycle transitions validated server-side (In Review → Approved → Published per ADR-046).  
 4. Tenant/school context required for platform Teacher OS operations (`require_platform_tenant` pattern).
 
 ---

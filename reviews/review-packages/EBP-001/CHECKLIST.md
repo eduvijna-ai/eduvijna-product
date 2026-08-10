@@ -1,60 +1,31 @@
 ---
 id: EBP-001-CHECKLIST
-title: EBP-001 Review Checklist
+title: EBP-001 Review Checklist (EBP-001.4)
 ---
 
-# EBP-001 — Checklist
+# EBP-001.4 — Checklist
 
-## A. Blueprint completeness
+## Scope
 
-- [ ] README.md
-- [ ] IMPLEMENTATION_PLAN.md
-- [ ] SPRINT_BREAKDOWN.md
-- [ ] TASKS.md
-- [ ] DEPENDENCIES.md
-- [ ] RISKS.md
-- [ ] TEST_PLAN.md
-- [ ] ROLLBACK_PLAN.md
-- [ ] FEATURE_FLAGS.md
+- [x] PreparingYourKitPage / PreparingKitPage
+- [x] ArtifactProgressCard · ArtifactChecklist · ApprovalNotice · OpenReviewButton · ReviewQueueEntryCard
+- [x] MockArtifactService — single checklist source
+- [x] ADR-046 status `Generating` only
+- [x] ReviewQueuePlaceholderPage at `/teacher-os/review`
+- [x] Telemetry: artifactPreparingViewed · reviewQueueEntryViewed · reviewQueueOpened
+- [x] Unit + Playwright + flag-off regression
+- [x] Docs refreshed
 
-## B. Philosophy & constraints
+## STOP (must remain false)
 
-- [ ] Vertical-slice first mandated
-- [ ] Existing repos only (Quiz-React / eduvijna-api)
-- [ ] No new application
-- [ ] Generators reused, not rewritten
-- [ ] Out of scope respected
+- [ ] Review Queue engine
+- [ ] AI generation / Agents / MCP
+- [ ] Orchestration
+- [ ] Backend APIs / DB / progress polling
 
-## C. Wave 1 scope
+## Decision
 
-- [ ] Outcome navigation
-- [ ] Today's Mission
-- [ ] Today Dashboard elements
-- [ ] Review Queue mandatory
-- [ ] Continuous Context (session)
-- [ ] Feature flags defined
-- [ ] Performance targets stated
-
-## D. Quality gates
-
-- [ ] Unit / integration / UI / a11y / regression required
-- [ ] Rollback plan flag-first
-- [ ] Acceptance criteria listed
-
-## E. Review package
-
-- [ ] SUMMARY
-- [ ] CHANGED_FILES
-- [ ] CHECKLIST
-- [ ] OPEN_QUESTIONS
-- [ ] TEST_RESULTS (placeholder pre-impl OK)
-- [ ] OPEN_RISKS
-- [ ] ROLLOUT_CHECKLIST
-- [ ] DEPLOYMENT_NOTES
-
-## F. Decision
-
-- [ ] Approve — start Sprint 0
+- [ ] Approve — proceed to EBP-001.5
 - [ ] Approve with conditions
 - [ ] Request changes
 

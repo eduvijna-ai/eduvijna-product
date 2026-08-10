@@ -3,6 +3,7 @@
 **ID:** PA-ARTIFACT-001  
 **Decision:** A — Everything is an Artifact  
 **Status:** Accepted (product architecture)  
+**Lifecycle authority:** **ADR-046** (Artifact Status Lifecycle) — **no exceptions**  
 **Influences:** Every sprint from EBP-001 forward
 
 ---
@@ -30,14 +31,18 @@ This makes future capabilities cheaper and keeps **AI Assists, Teacher Decides**
 
 ---
 
-## Unified lifecycle
+## Unified lifecycle (ADR-046)
+
+**Every** Artifact type — Worksheet, Quiz, Lesson Plan, PPT, Homework, Rubric, Question Bank, and all future types — uses this lifecycle. **No exceptions.**
 
 ```text
 Draft
    ↓
-AI Generated
+Generating
    ↓
-Teacher Review      ← Review Queue (generic)
+Generated
+   ↓
+In Review
    ↓
 Approved
    ↓
@@ -48,14 +53,15 @@ Archived
 
 | State | Meaning |
 |-------|---------|
-| **Draft** | Intent/work stub or teacher-started empty shell |
-| **AI Generated** | Orchestration produced a version; awaiting human |
-| **Teacher Review** | In Review Queue / being edited |
-| **Approved** | Teacher accepted; Ready to Publish |
+| **Draft** | Stub / teacher-started shell; not yet (or not currently) generating |
+| **Generating** | Capability/orchestration in progress |
+| **Generated** | Machine produced a version; awaiting human review admission |
+| **In Review** | In Review Queue / teacher editing, regenerating, or deciding |
+| **Approved** | Teacher accepted; ready to publish |
 | **Published** | Delivered to intended audience (students/parents/records) |
 | **Archived** | Retained in Library history; not active |
 
-Mapping from earlier PA wording: *Needs review / In review* ⊂ **Teacher Review**; *Ready to Publish* = **Approved**; etc.
+Canonical record: `eduvijna-architecture/decisions/ADR-046-artifact-status-lifecycle.md`.
 
 ---
 
@@ -64,8 +70,8 @@ Mapping from earlier PA wording: *Needs review / In review* ⊂ **Teacher Review
 | Field group | Examples |
 |-------------|----------|
 | Identity | artifact_id, version |
-| Type | worksheet \| quiz \| lesson_plan \| ppt \| sketch_notes \| homework \| parent_draft \| … |
-| Lifecycle state | Draft → … → Archived |
+| Type | worksheet \| quiz \| lesson_plan \| ppt \| homework \| rubric \| question_bank \| … |
+| Lifecycle state | Draft → Generating → Generated → In Review → Approved → Published → Archived |
 | Provenance | intent_id (optional, may be completed), work_id, capabilities used |
 | Context chips | school, class, subject, topic (from School Context + Continuous Context at creation) |
 | Ownership | teacher_id, school_id |
@@ -80,9 +86,10 @@ Review Queue **does not care** what the content is — it operates on Artifact +
 
 1. Prefer one Artifact API/list filter over per-type queue endpoints.  
 2. Generators produce Artifacts (reuse existing content rows as Artifact backing where possible).  
-3. New capability = new type + renderer, not a new queue product.  
+3. New capability = new type + renderer, not a new queue product **or** a new lifecycle.  
 4. Library indexes Artifacts in Approved/Published/Archived.  
-5. Telemetry uses `artifact_id`, `artifact_type`, `lifecycle_state`.
+5. Telemetry uses `artifact_id`, `artifact_type`, `lifecycle_state` (ADR-046 names only).  
+6. Backend AI job states (ADR-044) must **map into** Generating / Generated — not invent UI-facing enums.
 
 ---
 
@@ -95,6 +102,7 @@ Review Queue **does not care** what the content is — it operates on Artifact +
 
 ## Related
 
-- `CONTENT_LIFECYCLE.md` (aligned to this lifecycle)  
+- **ADR-046** Artifact Status Lifecycle  
+- `CONTENT_LIFECYCLE.md` (align to ADR-046)  
 - `REVIEW_QUEUE.md`  
 - `INTENT_AND_WORK.md` (Decision B)  

@@ -57,6 +57,14 @@ User Story → React → Backend → Tests → Review → Deploy (flagged)
 
 Layer-only mega-PRs (frontend then backend then tests) are non-compliant.
 
+Across capabilities, sequencing follows **ADR-043**:
+
+```text
+Foundation → Hardening → Review → Next Capability
+```
+
+Never: Feature → Feature → Feature → Refactor.
+
 ### 3. Backward Compatibility
 
 **Never break existing schools.**
@@ -79,7 +87,8 @@ Layer-only mega-PRs (frontend then backend then tests) are non-compliant.
 Aligns with:
 
 - Review Queue (generic, type-agnostic)  
-- Artifact lifecycle: Draft → AI Generated → Teacher Review → Approved → Published → Archived  
+- Artifact lifecycle (**ADR-046**): Draft → Generating → Generated → In Review → Approved → Published → Archived  
+  (**No exceptions** for any Artifact type.)
 
 No generate-and-share bypass. No silent parent/student delivery.
 
@@ -116,9 +125,16 @@ See `edrs/README.md`.
 | Decision | Canonical doc |
 |----------|---------------|
 | Everything is an Artifact | `../product-architecture/teacher-os/ARTIFACT_MODEL.md` |
+| **ADR-046** Artifact Status Lifecycle (Draft→…→Archived; no exceptions) | `eduvijna-architecture/decisions/ADR-046-artifact-status-lifecycle.md` |
 | Intent is stateless; Work is stateful | `../product-architecture/teacher-os/INTENT_AND_WORK.md` |
 | Review Queue is the approval cockpit | `../product-architecture/teacher-os/REVIEW_QUEUE.md` |
+| **ADR-048** Review Queue owns approval (teacher judgement only — not generation/editing/orchestration) | `eduvijna-architecture/decisions/ADR-048-review-queue-owns-approval.md` |
 | Today's Mission is login landing | `../product-architecture/teacher-os/TODAYS_MISSION.md` |
+| **ADR-042** Shell owns UX — not business capabilities | `eduvijna-architecture/decisions/ADR-042-teacher-os-shell-owns-ux.md` |
+| **ADR-043** Foundation → Hardening → Review → Next Capability | `eduvijna-architecture/decisions/ADR-043-stable-foundations-before-features.md` |
+| **ADR-044** AI Platform behind stable product services (no frontend agents/MCP) | `eduvijna-architecture/decisions/ADR-044-ai-platform-behind-stable-services.md` |
+| **ADR-045** Teaching Intent owns goals; generators are capabilities (**constitutional**) | `eduvijna-architecture/decisions/ADR-045-teaching-intent-owns-goals.md` |
+| **ADR-047** Outcome-first language (Prepare Tomorrow) | `eduvijna-architecture/decisions/ADR-047-outcome-first-prepare-tomorrow.md` |
 
 ---
 

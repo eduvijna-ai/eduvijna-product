@@ -20,9 +20,11 @@ Admin Console  — ERP master data, roles, billing, school configuration
 
 ## Teacher OS (this architecture)
 
-**Owns:** Teaching Intents, kits, prepare/teach/observe/assess/analyze/improve loop, Teacher Memory, teacher-facing orchestration, Library of teaching artefacts, approval gates.
+**Owns:** Teaching Intents, kits, prepare/teach/observe/assess/analyze/improve loop, Teacher Memory, teacher-facing orchestration, Library of teaching artefacts, approval gates, **Teacher OS Shell UX** (ADR-042: navigation, layout, session context, orchestration *entry points*).
 
-**Does not own:** Fee collection, transport routes, payroll, admissions CRM, school-wide user provisioning (may deep-link).
+**Does not own:** Fee collection, transport routes, payroll, admissions CRM, school-wide user provisioning (may deep-link); **does not own generator/report/analytics business engines** — those remain in existing modules (ADR-042).
+
+**ADR-045:** Goals live on Teaching Intent; generators are capabilities invoked by orchestration.
 
 ---
 

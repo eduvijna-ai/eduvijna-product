@@ -65,10 +65,12 @@ See [`TEMPLATE.md`](TEMPLATE.md).
 | ID | Title | Status |
 |----|-------|--------|
 | [EDR-001](EDR-001-continuous-context-react-context.md) | Use React Context for session-scoped Continuous Context | Accepted |
+| [EDR-002](EDR-002-teacher-os-shell-foundation.md) | Teacher OS Shell Foundation | Accepted |
 
 ---
 
 ## Related
 
 - Constitution: Preserve Architecture; Constitutional Freeze  
-- ADRs: `eduvijna-architecture` decisions (EAO) · Product Architecture decisions in PA review packages  
+- ADRs: `eduvijna-architecture/decisions/` (EAO) · Product Architecture decisions in PA review packages  
+- Teacher OS ADRs (Accepted): **ADR-042** · **ADR-043** · **ADR-044** (AI behind services) · **ADR-045** (constitutional Intent) · **ADR-046** (Artifact lifecycle) · **ADR-047** (Prepare Tomorrow language) 

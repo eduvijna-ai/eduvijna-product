@@ -52,7 +52,7 @@ Cross-cutting engineering rules. Detailed topics live in specialized standards â
 | Artifact | Unit of generate/review/publish (type is an attribute) |
 | Work | Stateful container of Artifacts over time |
 | Intent | Stateless teaching request that completes |
-| Review Queue | Type-agnostic approval surface |
+| Review Queue | Type-agnostic approval surface (**ADR-048** â€” judgement only) |
 | Continuous Context | In-session thread (not durable Memory) |
 
 Do not invent synonyms (`item`, `doc`, `job`) for these concepts in Teacher OS code.

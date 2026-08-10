@@ -23,7 +23,7 @@
 |-------|------|
 | `mission.viewed` | Mission opened |
 | `mission.review_cta_clicked` | Review → |
-| `artifact.generated` | Entered AI Generated |
+| `artifact.generated` | Entered **Generated** (ADR-046) |
 | `artifact.review_opened` | Opened from Queue |
 | `artifact.approved` | Approved |
 | `artifact.rejected` | Rejected |

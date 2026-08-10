@@ -1,8 +1,8 @@
 # Content Lifecycle
 
 **ID:** PA-LIFE-001  
-**Status:** Draft — PA-001 (aligned to Decision A — Artifact Model)  
-**Canonical model:** `ARTIFACT_MODEL.md`
+**Status:** Draft — PA-001 (aligned to Decision A — Artifact Model · **ADR-046**)  
+**Canonical model:** `ARTIFACT_MODEL.md` · **ADR-046**
 
 ---
 
@@ -10,18 +10,22 @@
 
 Define how **Artifacts** move from idea to classroom to archive — without duplicate “versions of truth.”
 
-**Everything is an Artifact.** Types (worksheet, quiz, PPT, …) are attributes.
+**Everything is an Artifact.** Types (worksheet, quiz, PPT, homework, rubric, question bank, …) are attributes.
+
+**One lifecycle. No exceptions.** (ADR-046)
 
 ---
 
-## Unified Artifact lifecycle (Decision A)
+## Unified Artifact lifecycle (ADR-046)
 
 ```text
 Draft
    ↓
-AI Generated
+Generating
    ↓
-Teacher Review      ← Review Queue (generic — type-agnostic)
+Generated
+   ↓
+In Review      ← Review Queue (generic — type-agnostic)
    ↓
 Approved
    ↓
@@ -33,13 +37,14 @@ Archived
 | State | Queue / product meaning |
 |-------|-------------------------|
 | Draft | Stub / pre-generate |
-| AI Generated | Entered queue as needs review |
-| Teacher Review | Opened / editing / Continuous Context refine |
+| Generating | Capability/orchestration in progress |
+| Generated | Machine version ready; awaiting / entering queue |
+| In Review | Opened / editing / Continuous Context refine |
 | Approved | Ready to Publish |
 | Published | Assigned/sent to audience |
 | Archived | Library history |
 
-Optional: **Superseded** when regenerate replaces an older Artifact version under the same Work.
+Optional: **Superseded** when regenerate replaces an older Artifact version under the same Work (versioning detail — does not replace the ADR-046 public status set).
 
 ---
 
@@ -56,14 +61,14 @@ See `INTENT_AND_WORK.md`.
 
 | From → To | Who | Rule |
 |-----------|-----|------|
-| Draft → AI Generated | System (generate) | Intent may complete; Work persists; Artifact enters Review Queue |
-| AI Generated → Teacher Review | Teacher | Opens queue item |
-| Teacher Review → Approved | Teacher | Explicit approve |
+| Draft → Generating | System | Generation/orchestration started |
+| Generating → Generated | System | Machine version complete |
+| Generated → In Review | System / Teacher | Enters or opens Review Queue |
+| In Review → Approved | Teacher | Explicit approve |
 | Approved → Published | Teacher | Explicit assign/send |
 | * → Archived | Teacher or policy | Remains searchable in Library |
 
-**Product rule:** Student/parent-facing Artifacts cannot jump to Published without Teacher Review approval.
-
+**Product rule:** Student/parent-facing Artifacts cannot jump to Published without **In Review** approval.
 
 ---
 
@@ -73,7 +78,7 @@ See `INTENT_AND_WORK.md`.
 |--------|-------|
 | Teaching Intent | Parent object |
 | Kit | Bundle of artefacts for an intent |
-| Artefact | Lesson, worksheet, quiz, PPT, sketch notes, homework, message draft, etc. |
+| Artefact | Lesson, worksheet, quiz, PPT, homework, rubric, question bank, etc. |
 | Assignment / attempt | Student-facing instance of published artefact |
 | Insight snapshot | Analyze output linked to Improve actions |
 
@@ -81,8 +86,8 @@ See `INTENT_AND_WORK.md`.
 
 ## Library relationship
 
-- **Approved** and **Completed** kits appear in Library by default  
-- **Draft / In Review** appear under Prepare, not Library browse (unless “my drafts” filter)  
+- **Approved** and **Published** kits/artifacts appear in Library by default  
+- **Draft / Generating / Generated / In Review** appear under Prepare / Queue, not Library browse (unless “my drafts” filter)  
 - Duplicating Library item creates new Intent Draft (does not mutate history)
 
 ---
@@ -101,5 +106,7 @@ Each artefact retains:
 
 ## Related
 
-- `AI_ORCHESTRATION.md`  
-- Library screens in `SCREEN_HIERARCHY.md`
+- **ADR-046** Artifact Status Lifecycle  
+- `ARTIFACT_MODEL.md`  
+- `REVIEW_QUEUE.md`  
+- `INTENT_AND_WORK.md`  

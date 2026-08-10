@@ -67,7 +67,7 @@ Empty states include one clear next action.
 ## 7. AI progress indicators
 
 1. Any generate &gt; ~300 ms shows progress (determinate if known, otherwise indeterminate + label).  
-2. Multi-artifact orchestration: per-Artifact status in Queue (Assembling / AI Generated).  
+2. Multi-artifact orchestration: per-Artifact status in Queue (Generating / Generated / In Review).  
 3. Continuous Context follow-ups (“make harder”) show which Artifact is updating.  
 4. Never silent hang.
 

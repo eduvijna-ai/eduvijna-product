@@ -1,14 +1,19 @@
 # Teaching Intent Model
 
 **ID:** PA-INTENT-001  
-**Status:** Draft — PA-001  
-**Role:** Heart of Teacher OS — product behaviour only
+**Status:** Draft — PA-001 · **bound by ADR-045 (constitutional)**  
+**Role:** Heart of Teacher OS — product behaviour only  
+**Strategic expression:** ADR-047 — “Help me prepare tomorrow.”  
+**Service boundary:** ADR-044 — Teacher OS talks only to stable application services (never agents/MCP in the frontend).  
+**Artifact lifecycle:** ADR-046 — one status machine for every type (no exceptions).
 
 ---
 
 ## Definition
 
 A **Teaching Intent** is the teacher’s stated outcome for a class, topic, and time window.
+
+**ADR-045:** Teaching Intent owns teacher goals. Generators are capabilities behind Intent — they do not own goals.
 
 The OS expands one intent into multiple capabilities, then presents a **single kit** for review and approval.
 
