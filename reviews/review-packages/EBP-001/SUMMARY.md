@@ -3,28 +3,25 @@ id: EBP-001
 title: Review Package — Teacher OS Foundation Engineering Blueprint
 owner: EduVijna Product Office + Engineering
 status: draft
-version: 0.4.0
+version: 0.5.0
 created: 2026-08-07
-last_updated: 2026-08-10
+last_updated: 2026-08-11
 review_type: Engineering Blueprint Review
 foundation: PA-001 · TLM-001
 ---
 
 # EBP-001 — Summary
 
-## Latest slice: EBP-001.4 Review Queue Entry
+## Latest slice: EBP-001.5 Review Queue
 
 **Status:** Implemented in `Quiz-React` — awaiting architecture review.
 
-Bridge only:
+`/teacher-os/review` is the approval cockpit (ADR-048):
 
-```text
-Intent → Continue → Preparing your teaching kit (mock) → Open Review Queue → placeholder
-```
-
-- ADR-046 statuses used with **`Generating`** only  
-- Checklist from `MockArtifactService` (not hardcoded JSX)  
-- No Review Queue engine, AI, APIs, orchestration, or polling  
+- Data-driven mock artifacts (`In Review`)
+- Approve → `Approved` (**not** Published)
+- Reject / Request Changes → review decision metadata (no new ADR-046 statuses)
+- No AI / agents / MCP / orchestration / publish
 
 See `engineering/EBP-001/IMPLEMENTATION_SUMMARY.md`.
 
@@ -35,9 +32,9 @@ See `engineering/EBP-001/IMPLEMENTATION_SUMMARY.md`.
 | Shell + hardening | Shipped |
 | Today's Mission | Shipped |
 | Teaching Intent (ADR-045) | Shipped |
-| Review Queue Entry (ADR-046 first use) | **This review** |
-| Review Queue (EBP-001.5) | Not started |
+| Review Queue Entry (ADR-046 first use) | Shipped |
+| Review Queue (ADR-048) | **This review** |
 
 ## STOP
 
-Do not implement Review Queue / AI / Agents / MCP / orchestration until architecture approves EBP-001.4.
+Do not start Continuous Context / AI / publish until architecture approves EBP-001.5.

@@ -1,10 +1,13 @@
-# EBP-001.3 — Screenshots (Teaching Intent)
+# EBP-001.5 — Screenshots
 
-Capture with `teacher_os_enabled=true`:
+Capture for architecture review:
 
-1. Prepare goal grid (no Worksheet/Quiz/PPT tools)  
-2. Context form  
-3. Summary + **Coming in EBP-001.4**  
-4. Mobile stacked cards  
+1. Review Queue list — Needs Review count 3  
+2. Detail panel — Lesson Plan preview  
+3. After Approve — status Approved + “not published” banner  
+4. Request Changes form  
+5. Reject confirmation  
+6. Empty state (“You’re all caught up”)  
+7. Mobile: list → detail with Back  
 
-Attach to PR; not committed here.
+Place images under review package assets when available.

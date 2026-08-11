@@ -1,13 +1,13 @@
 # EBP-001 — Teacher OS Foundation Engineering Blueprint
 
 **ID:** EBP-001  
-**Status:** EBP-001.4 Review Queue Entry implemented — awaiting architecture review  
+**Status:** EBP-001.5 Review Queue implemented — awaiting architecture review  
 **Wave:** 1 — Teacher OS Shell  
 **Philosophy:** Vertical-slice first (usable teacher value every sprint)  
 **Product foundation:** PA-001 · TLM-001  
 **Owner:** EduVijna Product Office + Engineering
 
-**Implementation package:** see `IMPLEMENTATION_SUMMARY.md` (latest: EBP-001.4) and sibling review docs in this folder.
+**Implementation package:** see `IMPLEMENTATION_SUMMARY.md` (latest: EBP-001.5) and sibling review docs in this folder.
 
 ---
 

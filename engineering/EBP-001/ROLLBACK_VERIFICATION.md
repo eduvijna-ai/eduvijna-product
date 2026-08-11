@@ -1,7 +1,7 @@
-# EBP-001.3 — Rollback Verification (Teaching Intent)
+# EBP-001.5 — Rollback Verification
 
-1. Disable `teacher_os_enabled`.  
-2. Confirm `/teacher-os/prepare` does not render Intent UX.  
-3. Confirm classic app unchanged.  
-
-No API/DB migrations. Optional code revert if flag boundary fails.
+1. Disable `teacher_os_enabled` (API flag / env override).  
+2. Confirm `/teacher-os/review` does not render Review Queue UI.  
+3. Confirm classic dashboard / Platform AI paths still work.  
+4. No DB migration to reverse.  
+5. No new feature flag to disable separately — master flag only.

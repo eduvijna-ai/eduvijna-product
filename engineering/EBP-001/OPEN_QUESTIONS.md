@@ -1,38 +1,31 @@
-# EBP-001.4 — Open Questions (Review Queue Entry)
+# EBP-001.5 — Open Questions (Review Queue)
 
-Prior Intent decisions (EBP-001.3) remain in force. Updates for this slice:
+## Q1 — Rejected lifecycle status
 
----
+**Decision for this slice:** Do **not** add `Rejected` to ADR-046.
 
-## Q1 — Custom Goal free-text
+Reject sets `reviewDecision: 'rejected'` while lifecycle stays `In Review`.
 
-**Prior decision:** Add free-text for Custom in EBP-001.4.
-
-**This slice:** Not implemented — EBP-001.4 scope was **Review Queue Entry** only (mock preparing kit + placeholder).
-
-**Status:** Still open for a follow-up Intent polish slice (or fold into EBP-001.5 if product prefers).
+**Status:** Documented; escalate only if Product wants an ADR-046 amendment.
 
 ---
 
-## Q2 — Default Context
+## Q2 — Request Changes → regeneration
 
-**Decision:** Unchanged — no timetable autofill.
+**Decision:** Capture note only. No AI / agents / MCP from the queue (ADR-048 / ADR-044).
+
+**Status:** Deferred to a later AI/platform slice.
 
 ---
 
-## Q3 — Continue destination
+## Q3 — Publish
 
-**Decision:** Implemented — Continue → Preparing kit → Open Review Queue → `/teacher-os/review` placeholder.
+**Decision:** Out of scope. Approved ≠ Published.
 
-**Not** orchestration. **Not** full Review Queue.
+**Status:** Deferred.
 
 ---
 
 ## Still deferred
 
-- **EBP-001.5** — Review Queue (approval cockpit)
-- **ADR-047** — Prepare Tomorrow multi-artifact orchestration
-- Custom goal free-text
-- Real ArtifactService / generation / progress polling
-- Timetable-driven defaults
-- Backend AI platform internals (ADR-044)
+- Continuous Context · Teacher Memory · Orchestration · Real Artifact API · Editor hand-offs · Explain / Regenerate engines

@@ -1,31 +1,37 @@
 ---
 id: EBP-001-CHECKLIST
-title: EBP-001 Review Checklist (EBP-001.4)
+title: EBP-001 Review Checklist (EBP-001.5)
 ---
 
-# EBP-001.4 — Checklist
+# EBP-001.5 — Checklist
 
 ## Scope
 
-- [x] PreparingYourKitPage / PreparingKitPage
-- [x] ArtifactProgressCard · ArtifactChecklist · ApprovalNotice · OpenReviewButton · ReviewQueueEntryCard
-- [x] MockArtifactService — single checklist source
-- [x] ADR-046 status `Generating` only
-- [x] ReviewQueuePlaceholderPage at `/teacher-os/review`
-- [x] Telemetry: artifactPreparingViewed · reviewQueueEntryViewed · reviewQueueOpened
-- [x] Unit + Playwright + flag-off regression
+- [x] Real `/teacher-os/review` Review Queue
+- [x] Data-driven mock ArtifactService
+- [x] ADR-046 statuses only (no Rejected lifecycle)
+- [x] Approve / Reject / Request Changes
+- [x] Approved ≠ Published
+- [x] Filters + Needs Review count
+- [x] Loading / empty / error
+- [x] Accessibility
+- [x] Telemetry
+- [x] `teacher_os_enabled` only
+- [x] Unit + Playwright
+- [x] ADR-048 recorded + implemented
 - [x] Docs refreshed
 
 ## STOP (must remain false)
 
-- [ ] Review Queue engine
-- [ ] AI generation / Agents / MCP
-- [ ] Orchestration
-- [ ] Backend APIs / DB / progress polling
+- [ ] AI / Agents / MCP / Orchestration
+- [ ] Publish workflow
+- [ ] Regeneration engine
+- [ ] New Artifact API / DB
+- [ ] Continuous Context / Teacher Memory
 
 ## Decision
 
-- [ ] Approve — proceed to EBP-001.5
+- [ ] Approve — next slice TBD
 - [ ] Approve with conditions
 - [ ] Request changes
 
