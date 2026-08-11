@@ -1,42 +1,32 @@
-# EBP-001.5 — Implementation Summary (Review Queue)
+# EBP-001.8 — Implementation Summary (Teacher / School Context Read Surface)
 
-**ID:** EBP-001.5-REVIEW-QUEUE  
-**Slice:** Teacher judgement cockpit at `/teacher-os/review`  
+**ID:** EBP-001.8-TEACHER-SCHOOL-CONTEXT-READ  
+**Slice:** Teacher / School Context Read Surface (NOT Teacher Memory)  
 **Status:** Complete — awaiting architecture review  
 **Date:** 2026-08-11  
-**Implements:** **ADR-048** (Review Queue owns approval)  
-**Lifecycle:** **ADR-046** (no new statuses)  
-**AI boundary:** **ADR-044** (Mock ArtifactService only)  
-**Prior:** EBP-001.4 Review Queue Entry  
 
 ---
 
 ## What shipped
 
-Real Review Queue replacing the placeholder:
+1. **Authorization verified** — `GET /api/v1/school-management/my-school` uses `Authorize()` + JWT `school_id` only (no client school_id override); instructors allowed.
+2. **Shell-level school hydration** — `TeacherOsProvider` calls existing `schoolsApi.getMySchool()` once per `school_id` and sets `school.name`.
+3. **School Context card** — shows authoritative school name; falls back to `School #<id>` on failure/empty; labels shell fields as **Current** (not Preferred/Remembered).
+4. **Teacher Context card** — preserved; selection labels clarified as Current; no Memory copy.
+5. **Non-blocking** — my-school failure does not block Teacher OS.
 
-1. Data-driven list from `MockArtifactService` / `MOCK_REVIEW_ARTIFACTS_SEED`  
-2. Filters: All · Needs Review · Approved · Rejected (Rejected = **review decision**, not lifecycle)  
-3. Detail panel: metadata + mock preview + Approve / Request Changes / Reject  
-4. Approve → `In Review` → **`Approved`** (explicitly **not** Published)  
-5. Reject / Request Changes → stay **`In Review`** with `reviewDecision` metadata  
-6. Loading / empty / error + Retry  
-7. Telemetry: `reviewQueueViewed`, `reviewArtifactOpened`, `reviewFilterChanged`, `reviewApproved`, `reviewRejected`, `reviewChangesRequested`  
-8. Flag: **`teacher_os_enabled` only**
+## Explicitly NOT shipped
 
-## Modeling note (critical)
-
-ADR-046 has **no** `Rejected` status. EBP-001.5 uses:
-
-| Field | Role |
-|-------|------|
-| `status` | ADR-046 only |
-| `reviewDecision` | `none` \| `approved` \| `rejected` \| `changes_requested` |
-
-## What did **not** ship
-
-AI · Agents · MCP · Orchestration · Publish · Regeneration engine · New APIs · DB · Continuous Context · Teacher Memory · New feature flags
+| Item | Status |
+|------|--------|
+| Teacher Memory | Not implemented |
+| Teacher preferences | Not implemented |
+| Inferred personalization | Not implemented |
+| MissionService changes | None |
+| ContinuousContext changes | None |
+| New backend API / DB | None |
+| AI / Agents / MCP / Orchestration | None |
 
 ## STOP
 
-Await architecture review. Do not start Continuous Context / AI / publish.
+Await Chief AI Enterprise Architect review. Do not start Teacher Memory / preferences / personalization.

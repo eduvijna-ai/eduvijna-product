@@ -1,9 +1,14 @@
-# EBP-001.5 — Known Risks
+# EBP-001.8 — Known Risks
 
-| ID | Risk | Mitigation |
-|----|------|------------|
-| R-RQ-01 | Teams invent `Rejected` lifecycle | ADR-046 + reviewDecision field; unit asserts enum |
-| R-RQ-02 | Approve confused with Publish | Explicit copy + banner; no Publish button |
-| R-RQ-03 | Request Changes implies AI ran | Notice: request saved only; no regeneration |
-| R-RQ-04 | Mock store resets on reload | Expected until real ArtifactService |
-| R-RQ-05 | Mission pending count vs queue drift | Both seed from `MOCK_REVIEW_ARTIFACTS_SEED` |
+| Risk | Mitigation | Residual |
+|------|------------|----------|
+| my-school 404 when user has no school_id | Non-blocking; school card shows — | Low |
+| my-school network failure | Fallback `School #<id>`; no error page | Low |
+| Super-admin without school_id | No hydrate; school null — expected | Accepted |
+| Naming confusion with “Teacher Memory” | Docs + UI avoid Memory/Preferences claims | Process |
+| Duplicate fetches if provider remounts | Provider is once under Teacher OS layout | Low |
+
+## Non-risks
+
+- No DB / API / MissionService / ContinuousContext blast radius  
+- Feature flag OFF unchanged  

@@ -1,25 +1,29 @@
-# EBP-001.5 — Test Results (Review Queue)
+# EBP-001.8 — Test Results
 
-**Date:** 2026-08-11
+**Date:** 2026-08-11  
 
-## Unit (Vitest)
+## Authorization
+
+Inspected `app/modules/schoolmanagement/endpoints.py` `get_my_school`:
+
+- `Authorize()` (any authenticated user)
+- JWT `school_id` only
+- No arbitrary school_id parameter
+
+## Unit
 
 | Suite | Result |
 |-------|--------|
-| `teacherOs.reviewQueue.test.tsx` | ✅ 10 / 10 |
-| `teacherOs.reviewEntry.test.tsx` | ✅ 3 / 3 |
-| `teacherOs.mission.test.tsx` | ✅ 4 / 4 |
+| `tests/teacherOs.context.test.tsx` | ✅ (hydrate, fail, empty name, cards) |
+| `tests/teacherOs.mission.test.tsx` | ✅ (regression; MissionService unchanged) |
 
 ## Playwright
 
-| Suite | Result |
-|-------|--------|
-| `teacher-os.review-queue.spec.ts` | ✅ 3 / 3 |
-| `teacher-os.review-entry.spec.ts` | ✅ 2 / 2 |
-| `teacher-os.intent.spec.ts` | ✅ 3 / 3 |
-| `teacher-os.shell.spec.ts` | ✅ 4 / 4 |
-| **Total** | **✅ 12 / 12** |
+`tests/e2e/teacher-os.school-context.spec.ts` — **4/4 passed**
 
-## Explicit non-coverage
-
-No AI · no publish · no regeneration · no API
+| Scenario | Result |
+|----------|--------|
+| 1 Authoritative school name | ✅ |
+| 2 SPA nav; my-school once | ✅ |
+| 3 my-school failure → fallback | ✅ |
+| 4 Flag OFF classic dashboard | ✅ |

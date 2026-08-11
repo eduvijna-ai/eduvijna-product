@@ -1,37 +1,25 @@
 ---
 id: EBP-001-CHECKLIST
-title: EBP-001 Review Checklist (EBP-001.5)
+title: EBP-001.6 Checklist
 ---
 
-# EBP-001.5 — Checklist
+# EBP-001.6 — Checklist
 
-## Scope
-
-- [x] Real `/teacher-os/review` Review Queue
-- [x] Data-driven mock ArtifactService
-- [x] ADR-046 statuses only (no Rejected lifecycle)
-- [x] Approve / Reject / Request Changes
-- [x] Approved ≠ Published
-- [x] Filters + Needs Review count
-- [x] Loading / empty / error
-- [x] Accessibility
-- [x] Telemetry
-- [x] `teacher_os_enabled` only
-- [x] Unit + Playwright
-- [x] ADR-048 recorded + implemented
+- [x] TeacherOsProvider once at layout
+- [x] ContinuousContextProvider once at layout
+- [x] Intent Continue starts thread + workContext snapshot
+- [x] Preparing Kit reads thread
+- [x] Review reads thread; not thread-only queue
+- [x] Focused artifact + recentDirective
+- [x] Same threadId survives Prepare → Kit → Review
+- [x] React memory only
+- [x] No AI / Memory / API / DB
+- [x] Tests green
 - [x] Docs refreshed
-
-## STOP (must remain false)
-
-- [ ] AI / Agents / MCP / Orchestration
-- [ ] Publish workflow
-- [ ] Regeneration engine
-- [ ] New Artifact API / DB
-- [ ] Continuous Context / Teacher Memory
 
 ## Decision
 
-- [ ] Approve — next slice TBD
+- [ ] Approve
 - [ ] Approve with conditions
 - [ ] Request changes
 

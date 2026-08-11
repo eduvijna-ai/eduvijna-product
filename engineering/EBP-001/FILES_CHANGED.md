@@ -1,33 +1,27 @@
-# EBP-001.5 — Files Changed (Review Queue)
-
-## Quiz-React — added
-
-| Path | Purpose |
-|------|---------|
-| `src/features/teacher-os/review/pages/ReviewQueuePage.tsx` | Review Queue page |
-| `src/features/teacher-os/review/hooks/useReviewQueue.ts` | Load / filter / actions |
-| `src/features/teacher-os/review/components/*` | Filters, list, detail |
-| `src/features/teacher-os/review/styles/ReviewQueue.module.css` | Styles |
-| `tests/teacherOs.reviewQueue.test.tsx` | Unit |
-| `tests/e2e/teacher-os.review-queue.spec.ts` | Playwright |
+# EBP-001.8 — Files Changed
 
 ## Quiz-React — modified
 
 | Path | Purpose |
 |------|---------|
-| `artifacts/types.ts` | ReviewArtifact, reviewDecision, filters, service ops |
-| `artifacts/adapters/mockArtifactService.ts` | Mock queue + approve/reject/requestChanges |
-| `App.tsx` | REVIEW → `ReviewQueuePage` |
-| `index.ts` | Exports |
-| `telemetry/TeacherTelemetry.ts` | Review events |
-| `mission/.../PendingReviewsCard.tsx` | Link to queue |
-| `mission/adapters/mockMissionAdapter.ts` | Pending count from seed |
-| `review-entry/.../ReviewQueueEntryCard.tsx` | Opens live queue |
-| Prior intent/review-entry tests | Expect real queue |
+| `src/features/teacher-os/context/TeacherOsContext.tsx` | One-shot `my-school` hydrate → `school.name`; optional test `fetchMySchool` |
+| `src/features/teacher-os/mission/components/SchoolContextCard.tsx` | Authoritative name + Current* labels |
+| `src/features/teacher-os/mission/components/TeacherContextCard.tsx` | Current* labels (no Memory) |
+| `src/features/teacher-os/index.ts` | Export provider prop types |
+| `tests/teacherOs.context.test.tsx` | Hydration / failure / card tests |
+| `tests/e2e/teacher-os.school-context.spec.ts` | Playwright scenarios 1–4 |
 
-## Architecture / Product
+## Unchanged (by design)
+
+| Area | Note |
+|------|------|
+| MissionService / mock adapter | No school payload |
+| ContinuousContext | Untouched |
+| eduvijna-api | No new API; my-school reused |
+| Database | No migrations |
+
+## Product docs
 
 | Path | Purpose |
 |------|---------|
-| `ADR-048-…` | Implementation note for EBP-001.5 + reject modeling |
-| `engineering/EBP-001/*` | Review package refresh |
+| `engineering/EBP-001/*` | EBP-001.8 review package |

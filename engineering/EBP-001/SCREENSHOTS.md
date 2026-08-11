@@ -1,13 +1,12 @@
-# EBP-001.5 — Screenshots
+# EBP-001.8 — Screenshots / Visual Notes
 
-Capture for architecture review:
+No layout redesign.
 
-1. Review Queue list — Needs Review count 3  
-2. Detail panel — Lesson Plan preview  
-3. After Approve — status Approved + “not published” banner  
-4. Request Changes form  
-5. Reject confirmation  
-6. Empty state (“You’re all caught up”)  
-7. Mobile: list → detail with Back  
+Verify on `/teacher-os/today`:
 
-Place images under review package assets when available.
+1. **School Context** shows authoritative school name (not `School #<id>` when my-school succeeds).  
+2. Labels read **Current academic year / board / language** — not Preferred/Remembered.  
+3. **Teacher Context** still shows teacher name + current selections.  
+4. No “Teaching Preferences” / “Teacher Memory” copy.
+
+Capture during architecture review if needed.
