@@ -1,11 +1,11 @@
 blank_issues_enabled: false
 contact_links:
   - name: Contribution guide
-    url: https://github.com/eduvijna/eduvijna-product/blob/main/CONTRIBUTING.md
+    url: https://github.com/eduvijna-ai/eduvijna-product/blob/main/CONTRIBUTING.md
     about: Read CONTRIBUTING.md before opening an issue.
   - name: Repository README
-    url: https://github.com/eduvijna/eduvijna-product/blob/main/README.md
+    url: https://github.com/eduvijna-ai/eduvijna-product/blob/main/README.md
     about: Mission, scope, structure, and contribution workflow.
   - name: Architecture Office repository
-    url: https://github.com/eduvijna/eduvijna-architecture
+    url: https://github.com/eduvijna-ai/eduvijna-architecture
     about: EAO governance lives in eduvijna-architecture — not here.

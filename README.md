@@ -92,7 +92,7 @@ Implementation targets existing apps: **Quiz-React (eduvijna-web)** + **eduvijna
 
 ## Contribution
 
-Follow [`CONTRIBUTING.md`](CONTRIBUTING.md). Same core rules as [eduvijna-architecture](https://github.com/eduvijna/eduvijna-architecture):
+Follow [`CONTRIBUTING.md`](CONTRIBUTING.md). Same core rules as [eduvijna-architecture](https://github.com/eduvijna-ai/eduvijna-architecture):
 
 - No implementation code  
 - Pull requests required to `main`  
@@ -106,7 +106,7 @@ Ownership: see [`CODEOWNERS`](CODEOWNERS).
 
 EduVijna Product Office.
 
-GitHub: [github.com/eduvijna/eduvijna-product](https://github.com/eduvijna/eduvijna-product)
+GitHub: [github.com/eduvijna-ai/eduvijna-product](https://github.com/eduvijna-ai/eduvijna-product)
 
 ## License
 
