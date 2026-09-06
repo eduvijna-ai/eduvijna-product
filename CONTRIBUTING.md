@@ -2,7 +2,7 @@
 
 Contributions to this Product Office repository must preserve product-intelligence integrity, traceability, and reviewability.
 
-These rules mirror the contribution rules of [eduvijna-architecture](https://github.com/eduvijna/eduvijna-architecture), adapted for product research and product architecture (not EAO governance directories).
+These rules mirror the contribution rules of [eduvijna-architecture](https://github.com/eduvijna-ai/eduvijna-architecture), adapted for product research and product architecture (not EAO governance directories).
 
 ## Rules
 
