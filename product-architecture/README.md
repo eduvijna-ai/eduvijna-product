@@ -110,3 +110,7 @@ Review package: `../reviews/review-packages/PA-001/`
 ## Stop condition
 
 **STOP after PA-001 review package. Await Product Architecture Review decision before engineering.**
+
+## AIEOS 360 client showcase (separate from PA-001 Teacher OS)
+
+The [AIEOS 360 acceptance record](aieos360/AIEOS360-CX01-I08-CLIENT-SHOWCASE-ACCEPTANCE.md) tracks the **2026-11-20 development-showcase** W01 criteria and Founder product observation. I07's deterministic cross-role engineering proof has passed, while **Founder showcase sign-off remains PENDING**; full AIEOS360 live REAL_AI generation and production readiness are **not** claimed. See the [AIEOS360 records index](aieos360/README.md). This does not change PA-001's historic Teacher OS scope or stop condition.
